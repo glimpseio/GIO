@@ -1,0 +1,23 @@
+// Common settings 
+#include "Glimpse-Common.xcconfig"
+
+// Enable Swift DEBUG preprocessor macro
+OTHER_SWIFT_FLAGS = "-DDEBUG"
+
+SWIFT_OPTIMIZATION_LEVEL = -Onone
+
+// Common settings for Debug configurations
+GCC_PREPROCESSOR_DEFINITIONS = $(value) DEBUG DEBUG_$(USER)
+INFOPLIST_PREPROCESSOR_DEFINITIONS = $(value) DEBUG DEBUG_$(USER)
+
+// Explicitly turn off strip for debug builds.
+COPY_PHASE_STRIP = NO
+
+// When debugging, it's often helpful to turn off optimizations
+GCC_OPTIMIZATION_LEVEL = 0
+GCC_WARN_UNINITIALIZED_AUTOS = NO
+
+// only build the active arch
+ONLY_ACTIVE_ARCH = YES
+
+

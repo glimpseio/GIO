@@ -1,0 +1,33 @@
+[submodule "InterScript"]
+	path = InterScript
+	url = https://github.com/glimpseio/InterScript.git
+[submodule "Glean"]
+	path = Glean
+	url = https://github.com/glimpseio/Glean.git
+[submodule "Glue"]
+	path = Glue
+	url = https://github.com/glimpseio/Glue.git
+[submodule "Glimpse"]
+	path = Glimpse
+	url = https://github.com/glimpseio/Glimpse.git
+[submodule "Glib"]
+	path = Glib
+	url = https://github.com/glimpseio/Glib.git
+[submodule "Glance"]
+	path = Glance
+	url = https://github.com/glimpseio/Glance.git
+[submodule "Enfont"]
+	path = Enfont
+	url = https://github.com/glimpseio/Enfont.git
+[submodule "Kanji"]
+	path = Kanji
+	url = https://github.com/glimpseio/Kanji.git
+[submodule "GlimpseXML"]
+	path = GlimpseXML
+	url = https://github.com/glimpseio/GlimpseXML.git
+[submodule "BricBrac"]
+	path = BricBrac
+	url = https://github.com/glimpseio/BricBrac.git
+[submodule "ChannelZ"]
+	path = ChannelZ
+	url = https://github.com/glimpseio/ChannelZ.git

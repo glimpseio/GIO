@@ -1,0 +1,7 @@
+
+#include "Glimpse-Common.xcconfig"
+
+// build for all platforms
+SUPPORTED_PLATFORMS = macosx iphonesimulator iphoneos
+
+

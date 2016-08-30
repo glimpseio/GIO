@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Glib/Glib.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Glue/Glue.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Glimpse/Glimpse.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Glance/Glance.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Glean/Glean.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:InterScript/InterScript.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Enfont/Enfont.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Kanji/Kanji.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:BricBrac/BricBrac.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:GlimpseXML/GlimpseXML.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ChannelZ/ChannelZ.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SQLite/SQLite.xcodeproj">
+   </FileRef>
+</Workspace>

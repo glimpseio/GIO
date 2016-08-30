@@ -1,0 +1,3 @@
+
+#include "Glimpse-Common-Debug.xcconfig"
+#include "Glimpse-Framework.xcconfig"

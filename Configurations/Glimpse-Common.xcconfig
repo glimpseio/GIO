@@ -1,0 +1,28 @@
+
+CURRENT_PROJECT_VERSION = 1
+VERSION_INFO_PREFIX = 
+VERSIONING_SYSTEM = apple-generic
+
+MACOSX_DEPLOYMENT_TARGET = 10.10
+IPHONEOS_DEPLOYMENT_TARGET = 8.1
+
+EMBEDDED_CONTENT_CONTAINS_SWIFT = YES
+CLANG_ENABLE_OBJC_ARC = YES
+CLANG_ENABLE_MODULES = YES
+GCC_SYMBOLS_PRIVATE_EXTERN = NO
+GCC_DYNAMIC_NO_PIC = NO
+ALWAYS_SEARCH_USER_PATHS = NO
+DEBUG_INFORMATION_FORMAT = dwarf-with-dsym
+
+// CODE_SIGN_IDENTITY = iPhone Developer
+CODE_SIGN_IDENTITY[sdk=iphoneos*] = iPhone Developer
+
+// needed for cross-platform builds (OSX needs the ../, iOS needs the ./): otherwise: "Library not loaded: @rpath/libswiftCore.dylib"
+LD_RUNPATH_SEARCH_PATHS = $(value) @executable_path/Frameworks @loader_path/Frameworks @executable_path/../Frameworks @loader_path/../Frameworks
+
+// GlimpseXML unfortunately requires that we include this path
+HEADER_SEARCH_PATHS = $(HEADER_SEARCH_PATHS) $(SDKROOT)/usr/include/libxml2
+
+// disable generating the Objective-C bridging headers for now, just because we get warnings about no __nullability settings in the exported code (and we're not currently importing any of the code into Objective-C (and maybe it will speed up the builds))
+SWIFT_INSTALL_OBJC_HEADER = NO
+SWIFT_OBJC_INTERFACE_HEADER_NAME = ""
