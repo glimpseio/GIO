@@ -32,5 +32,5 @@
 	path = ChannelZ
 	url = https://github.com/glimpseio/ChannelZ.git
 [submodule "SQLite.swift"]
-	path = SQLite.swift
+	path = SQLite
 	url = https://github.com/stephencelis/SQLite.swift.git
