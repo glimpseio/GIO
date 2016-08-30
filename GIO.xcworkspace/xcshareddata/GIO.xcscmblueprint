@@ -1,0 +1,107 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "963FA805B4117C250D428575017B0EA5CC34879C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A858201BA6414CCDA92D7C405B7701E72068529D" : 0,
+    "BE1F338FBD9AEFA8F8DECD17C063DF3A93AC5C35" : 0,
+    "3AE8ED2E684071AF4FB151FA51BF266B82FF45BD" : 0,
+    "AF1BF5D3EE1B0E23C162A015A01DCF014A973F82" : 0,
+    "A291938FC925992E91DCB5FC981BBED656AFFE1B" : 0,
+    "3A4A163635C64F89BDE5B2A9819160756B141415" : 0,
+    "AF3BD8A515BF2EBEF2B0CB5AF61DE182601D860B" : 0,
+    "87D0568CE5E27B0101ADF86C87D6CDA7D73E1657" : 0,
+    "963FA805B4117C250D428575017B0EA5CC34879C" : 0,
+    "9F42732F349172375850C7106E9D61D812B16D7A" : 0,
+    "D5A8003D560B497066D7BD66EB40B1966353E46A" : 0,
+    "BA3A9C3DEB09A57039CDF8EA8FC65815CC42C363" : 0,
+    "10EC48D1B9C8A8FCC2EA100F826CD7C302F6CAA8" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "14A61057-9C81-470A-94AA-30388F19E208",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A858201BA6414CCDA92D7C405B7701E72068529D" : "GIO\/InterScript\/",
+    "BE1F338FBD9AEFA8F8DECD17C063DF3A93AC5C35" : "GIO\/Glue\/",
+    "3AE8ED2E684071AF4FB151FA51BF266B82FF45BD" : "GIO\/SQLite\/",
+    "AF1BF5D3EE1B0E23C162A015A01DCF014A973F82" : "GIO\/GlimpseXML\/",
+    "A291938FC925992E91DCB5FC981BBED656AFFE1B" : "GIO\/Glance\/",
+    "3A4A163635C64F89BDE5B2A9819160756B141415" : "GIO\/Glean\/",
+    "AF3BD8A515BF2EBEF2B0CB5AF61DE182601D860B" : "GIO\/Kanji\/",
+    "87D0568CE5E27B0101ADF86C87D6CDA7D73E1657" : "GIO\/Enfont\/",
+    "963FA805B4117C250D428575017B0EA5CC34879C" : "GIO\/",
+    "9F42732F349172375850C7106E9D61D812B16D7A" : "GIO\/Glib\/",
+    "D5A8003D560B497066D7BD66EB40B1966353E46A" : "GIO\/BricBrac\/",
+    "BA3A9C3DEB09A57039CDF8EA8FC65815CC42C363" : "GIO\/ChannelZ\/",
+    "10EC48D1B9C8A8FCC2EA100F826CD7C302F6CAA8" : "GIO\/Glimpse\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "GIO",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "GIO.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/glimpseio\/Glimpse.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "10EC48D1B9C8A8FCC2EA100F826CD7C302F6CAA8"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/glimpseio\/Glean.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3A4A163635C64F89BDE5B2A9819160756B141415"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/stephencelis\/SQLite.swift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3AE8ED2E684071AF4FB151FA51BF266B82FF45BD"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/glimpseio\/Enfont.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "87D0568CE5E27B0101ADF86C87D6CDA7D73E1657"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/glimpseio\/GIO.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "963FA805B4117C250D428575017B0EA5CC34879C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/glimpseio\/Glib.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9F42732F349172375850C7106E9D61D812B16D7A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/glimpseio\/Glance.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A291938FC925992E91DCB5FC981BBED656AFFE1B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/glimpseio\/InterScript.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A858201BA6414CCDA92D7C405B7701E72068529D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/glimpseio\/GlimpseXML.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AF1BF5D3EE1B0E23C162A015A01DCF014A973F82"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/glimpseio\/Kanji.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AF3BD8A515BF2EBEF2B0CB5AF61DE182601D860B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/glimpseio\/ChannelZ.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BA3A9C3DEB09A57039CDF8EA8FC65815CC42C363"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/glimpseio\/Glue.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BE1F338FBD9AEFA8F8DECD17C063DF3A93AC5C35"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/glimpseio\/BricBrac.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D5A8003D560B497066D7BD66EB40B1966353E46A"
+    }
+  ]
+}
