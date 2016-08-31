@@ -11,6 +11,6 @@ Building:
   * `npm install && npm run build && npm test`
   * `cd ../../../../`
  
-  * Open `GIO.xcworkspace` and run the `Glimpse` target
-  * Create a new sample with 
+  * Open `GIO.xcworkspace` and run the `Glimpse`/`My Mac` target
+  * Create a new sample with `File`->`New` and load a sample spec with `View`->`Load Sample` (some specs will fail to load; keep trying until one works)
 
