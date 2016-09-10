@@ -5,15 +5,19 @@
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "A858201BA6414CCDA92D7C405B7701E72068529D" : 0,
+    "E694CA75763BAF5D942C2C967F76B38417AFCEA5" : 0,
     "BE1F338FBD9AEFA8F8DECD17C063DF3A93AC5C35" : 0,
-    "3AE8ED2E684071AF4FB151FA51BF266B82FF45BD" : 0,
     "AF1BF5D3EE1B0E23C162A015A01DCF014A973F82" : 0,
     "A291938FC925992E91DCB5FC981BBED656AFFE1B" : 0,
+    "A0A605A17727A1548366B72E6130BAF4C16AC97C" : 0,
+    "3AE8ED2E684071AF4FB151FA51BF266B82FF45BD" : 0,
+    "36C1E8E5CEF4B3811229DD34B2C5BABDE61F1653" : 0,
     "3A4A163635C64F89BDE5B2A9819160756B141415" : 0,
     "AF3BD8A515BF2EBEF2B0CB5AF61DE182601D860B" : 0,
     "87D0568CE5E27B0101ADF86C87D6CDA7D73E1657" : 0,
     "963FA805B4117C250D428575017B0EA5CC34879C" : 0,
     "9F42732F349172375850C7106E9D61D812B16D7A" : 0,
+    "219177D050585AF7E3181A13AB151EEFB4183899" : 0,
     "7A9F6EBA3E829E0A31D33B29BC8473713FE3DB35" : 0,
     "D5A8003D560B497066D7BD66EB40B1966353E46A" : 0,
     "BA3A9C3DEB09A57039CDF8EA8FC65815CC42C363" : 0,
@@ -22,15 +26,19 @@
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "14A61057-9C81-470A-94AA-30388F19E208",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "A858201BA6414CCDA92D7C405B7701E72068529D" : "GIO\/InterScript\/",
+    "E694CA75763BAF5D942C2C967F76B38417AFCEA5" : "GIO\/Glance\/Glance\/js\/glacier\/",
     "BE1F338FBD9AEFA8F8DECD17C063DF3A93AC5C35" : "GIO\/Glue\/",
-    "3AE8ED2E684071AF4FB151FA51BF266B82FF45BD" : "GIO\/SQLite\/",
     "AF1BF5D3EE1B0E23C162A015A01DCF014A973F82" : "GIO\/GlimpseXML\/",
     "A291938FC925992E91DCB5FC981BBED656AFFE1B" : "GIO\/Glance\/",
+    "A0A605A17727A1548366B72E6130BAF4C16AC97C" : "GIO\/Glean\/GleanTests\/data\/samples\/Rdatasets\/",
+    "3AE8ED2E684071AF4FB151FA51BF266B82FF45BD" : "GIO\/SQLite\/",
+    "36C1E8E5CEF4B3811229DD34B2C5BABDE61F1653" : "GIO\/Glance\/Glance\/js\/vega-lite\/",
     "3A4A163635C64F89BDE5B2A9819160756B141415" : "GIO\/Glean\/",
     "AF3BD8A515BF2EBEF2B0CB5AF61DE182601D860B" : "GIO\/Kanji\/",
     "87D0568CE5E27B0101ADF86C87D6CDA7D73E1657" : "GIO\/Enfont\/",
     "963FA805B4117C250D428575017B0EA5CC34879C" : "GIO\/",
     "9F42732F349172375850C7106E9D61D812B16D7A" : "GIO\/Glib\/",
+    "219177D050585AF7E3181A13AB151EEFB4183899" : "GIO\/Glean\/GleanTests\/data\/samples\/sqlite\/geonames-sqlite\/",
     "7A9F6EBA3E829E0A31D33B29BC8473713FE3DB35" : "GIO\/Glance\/Glance\/js\/vega\/",
     "D5A8003D560B497066D7BD66EB40B1966353E46A" : "GIO\/BricBrac\/",
     "BA3A9C3DEB09A57039CDF8EA8FC65815CC42C363" : "GIO\/ChannelZ\/",
@@ -44,6 +52,16 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/glimpseio\/Glimpse.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "10EC48D1B9C8A8FCC2EA100F826CD7C302F6CAA8"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mjradwin\/geonames-sqlite.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "219177D050585AF7E3181A13AB151EEFB4183899"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/glimpseio\/vega-lite.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "36C1E8E5CEF4B3811229DD34B2C5BABDE61F1653"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/glimpseio\/Glean.git",
@@ -74,6 +92,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/glimpseio\/Glib.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9F42732F349172375850C7106E9D61D812B16D7A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/vincentarelbundock\/Rdatasets.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A0A605A17727A1548366B72E6130BAF4C16AC97C"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/glimpseio\/Glance.git",
@@ -109,6 +132,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/glimpseio\/BricBrac.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D5A8003D560B497066D7BD66EB40B1966353E46A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/glimpseio\/glacier",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E694CA75763BAF5D942C2C967F76B38417AFCEA5"
     }
   ]
 }
