@@ -34,3 +34,32 @@
 [submodule "SQLite.swift"]
 	path = SQLite
 	url = https://github.com/stephencelis/SQLite.swift.git
+[BricBrac "BricBrac"]
+	master = master
+	masterx = master
+[ChannelZ]
+	ChannelZ = master
+[ChannelZ "ChannelZ"]
+	master = master
+[Enfont "Enfont"]
+	master = master
+[Glance "Glance"]
+	master = master
+[Glean "Glean"]
+	master = master
+[Glin "Glib"]
+	master = master
+[Glimpse "Glimpse"]
+	master = master
+[Glib "Glib"]
+	master = master
+[GlimpseXML "GlimpseXML"]
+	master = master
+[Glue "Glue"]
+	master = master
+[InterScript "InterScript"]
+	master = master
+[Kanji "Kanji"]
+	master = master
+[SQLite "SQLite"]
+	master = master
