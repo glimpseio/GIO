@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Glint/Glint.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:AV8/AV8.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Glib/Glib.xcodeproj">
    </FileRef>
    <FileRef
@@ -33,8 +39,5 @@
    </FileRef>
    <FileRef
       location = "group:ChannelZ/ChannelZ.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:SQLite/SQLite.xcodeproj">
    </FileRef>
 </Workspace>
