@@ -9,6 +9,7 @@
 import Foundation
 import Glib
 import BricBrac
+import GlintModel
 
 let ServerURL = fixme("http://localhost:9000")
 let PresentURL = ServerURL + "/v1/present/"
@@ -19,13 +20,28 @@ public protocol GlintRequest : Bricable {
 }
 
 extension Msg : GlintRequest {
-    public typealias Response = Msg // OneOf2<PresentError, Msg>
+    public typealias Response = Msg
     public static let path = "echo"
 }
 
-extension StructureRequest : GlintRequest {
-    public typealias Response = TreeResponse // OneOf2<PresentError, TreeResponse>
+//extension TreeRequest : GlintRequest {
+//    public typealias Response = TreeResponse
+//    public static let path = "structure"
+//}
+
+extension FormatRequest : GlintRequest {
+    public typealias Response = FormatResponse
+    public static let path = "format"
+}
+
+extension TreeRequest : GlintRequest {
+    public typealias Response = TreeResponse
     public static let path = "structure"
+}
+
+extension PingRequest : GlintRequest {
+    public typealias Response = PingResponse
+    public static let path = "ping"
 }
 
 public class GlintSession {
@@ -88,7 +104,7 @@ let sessionQueue = DispatchQueue(label: "GlintSession", attributes: [.concurrent
 public extension GlintSession {
     public func requestSyntax(_ code: String, handler: @escaping (Result<TreeResponse>) -> ()) {
         sessionQueue.async { [unowned self] in
-            let req = StructureRequest(src: Src(identifier: fixme("<virtual>"), code: code))
+            let req = TreeRequest(src: Src(identifier: fixme("<virtual>"), code: code))
             self.sendRequest(req) { resp in
                 handler(resp)
             }

@@ -10,7 +10,7 @@ import Cocoa
 import Glib
 import Glue
 import Glintette
-
+import GlintModel
 
 let defs = UserDefaults.standard
 
@@ -131,7 +131,7 @@ extension EditorController : NSTextViewDelegate {
     func formatTree(_ lm: NSLayoutManager, _ tree: ParseTree) {
         
         func fmt(tree: ParseTree) {
-            var color: NSColor?
+            var color: NSColor = NSColor.textColor
 
             if let kind = tree.kind {
                 switch kind {
@@ -146,9 +146,9 @@ extension EditorController : NSTextViewDelegate {
                 }
             }
             
-            if let color = color, let start = tree.position.start, let end = tree.position.end, end > start {
+            if let start = tree.position.start, let end = tree.position.end, end > start {
                 let range = NSRange(location: start, length: end - start)
-                //dbg("highlighting \(range): \(color)")
+//                dbg("highlighting \(start)-\(end): \(color.CSSColorHex()) kind: \(tree.kind) str: \(lm.textStorage!.string as NSString.substring(with: range))")
                 lm.addTemporaryAttribute(NSForegroundColorAttributeName, value: color, forCharacterRange: range)
             }
             let _ = tree.children.map(fmt)
