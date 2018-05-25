@@ -6,7 +6,7 @@
 //  Copyright © 2017 Glimpse I/O. All rights reserved.
 //
 
-import Cocoa
+import AppKit
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {

@@ -100,6 +100,13 @@
 			remoteGlobalIDString = 496678941EF3266A003698B7;
 			remoteInfo = GlintModel;
 		};
+		497F3DDD206D6FAA00FF5B6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4966787A1EF2FD6E003698B7 /* BricBrac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 49DB61522063426D00022D2C;
+			remoteInfo = CurioDemoModels;
+		};
 		49A0F4411ED728C300ACC9A7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 49DBD78F1EB5386300930C27 /* Glue.xcodeproj */;
@@ -402,6 +409,7 @@
 				496678831EF2FD6E003698B7 /* BricBrac.framework */,
 				496678851EF2FD6E003698B7 /* BricBracTests.xctest */,
 				496678871EF2FD6E003698B7 /* Curio.framework */,
+				497F3DDE206D6FAA00FF5B6F /* CurioDemoModels.framework */,
 				496678891EF2FD6E003698B7 /* CurioTests.xctest */,
 				4966788B1EF2FD6E003698B7 /* curio */,
 			);
@@ -706,7 +714,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Glimpse I/O";
 				TargetAttributes = {
 					496678941EF3266A003698B7 = {
@@ -820,6 +828,13 @@
 			fileType = "compiled.mach-o.executable";
 			path = curio;
 			remoteRef = 4966788A1EF2FD6E003698B7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		497F3DDE206D6FAA00FF5B6F /* CurioDemoModels.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CurioDemoModels.framework;
+			remoteRef = 497F3DDD206D6FAA00FF5B6F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		49DBD7961EB5386300930C27 /* Glue.framework */ = {
@@ -1225,6 +1240,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1232,6 +1248,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1281,6 +1298,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1288,6 +1306,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

@@ -6,7 +6,7 @@
 //  Copyright © 2017 Glimpse I/O. All rights reserved.
 //
 
-import Cocoa
+import AppKit
 import Glib
 import Glue
 import Glintette
