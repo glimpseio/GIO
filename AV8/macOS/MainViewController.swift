@@ -6,7 +6,7 @@
 //  Copyright © 2016 io.glimpse. All rights reserved.
 //
 
-import Cocoa
+import AppKit
 
 class MainViewController: NSViewController {
     override func viewDidLoad() {

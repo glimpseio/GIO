@@ -23,7 +23,7 @@ extension SharedNative {
 }
 #endif
 
-#if os(OSX)
+#if os(macOS)
 extension SharedNative {
     var nativePlatformName: String { return "OSX" }
 }

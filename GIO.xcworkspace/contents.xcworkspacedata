@@ -2,19 +2,13 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Glint/Glint.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:AV8/AV8.xcodeproj">
+      location = "group:/opt/src/glimpse/GIO/GApp/GApp.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Glib/Glib.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Glue/Glue.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Glimpse/Glimpse.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Glance/Glance.xcodeproj">
@@ -26,18 +20,30 @@
       location = "group:InterScript/InterScript.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Enfont/Enfont.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:Kanji/Kanji.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:BricBrac/BricBrac.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:ChannelZ/ChannelZ.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:GlimpseXML/GlimpseXML.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:ChannelZ/ChannelZ.xcodeproj">
+      location = "group:AV8/AV8.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Guesswork/Guesswork.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Glint/Glint.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Glimpse/Glimpse.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Enfont/Enfont.xcodeproj">
    </FileRef>
 </Workspace>

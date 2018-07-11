@@ -1,0 +1,111 @@
+/* == Boxed reddit CSS Theme v1.9.0 - (http://www.reddit.com/r/boxed/)== */
+
+/* Font family declaration, fonts can be changed here */
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif !important;
+    font-weight: normal !important;
+}
+
+/* All font sizing is done in the following section */ 
+body, .wiki-page .md, body .side .md h6:nth-of-type(1) {
+    font-size: 16px !important;
+}
+
+.content .usertext-body .md,
+.side .sidecontentbox .helplink,
+.side .sidebox .morelink,
+.linkflairlabel {
+    font-size: 14px;
+}
+
+.hover.pagename.redditname,
+.thing .title,
+.submit-page .roundfield .title {
+    font-size: 18px !important;
+}
+
+.side .linkinfo, 
+.side .linkinfo .number, 
+.side .linkinfo .word, 
+.side .titlebox, 
+#sr-header-area, 
+#header-bottom-left .tabmenu, .tabmenu.formtab, 
+#header-bottom-right, 
+.pref-lang,
+.side .usertext-body .md,
+.midcol,
+.panestack-title,
+.panestack-title .title,
+.menuarea,
+.commentarea .usertext-edit:before,
+.markdownEditor a,
+.commentingAs,
+.usertext-edit .bottom-area a,
+.comment-visits-box .title,
+.footer,
+.submit-page .roundfield,
+.submit-page .infobar,
+.submit-page .roundfield label,
+#RESDropdownOptions,
+#image-preview-list,
+#image-upload,
+.btn.right,
+.wiki-page .pageactions,
+#search-expando,
+body:not(.search-page) #search input[type="text"],
+#searchexpando,
+.raisedbox, 
+.searchpane,
+.hover-bubble,
+.deepthread {
+    font-size: 12px !important;
+}
+
+#header-bottom-right .userkarma,
+.side .linkinfo .shortlink, 
+.side .subscribe-button.fancy-toggle-button.toggle a,
+.side .subButtons span,
+.side .subscribers,
+.side .users-online,
+.side .leavemoderator,
+.side .titlebox .toggle,
+.tagline,
+body .side .title,
+.side .sidecontentbox,
+.account-activity-box,
+.tagline,
+.flat-list,
+.bottommenu,
+.submit-page .roundfield #suggested-reddits {
+    font-size: 10px !important;
+}
+
+.md h1, .commentarea h1,.wiki-page-content .md .wiki h1 {
+    font-size: 1.6em !important;
+    font-weight: bold;
+}
+
+.md h2, .commentarea h2,.wiki-page-content .md .wiki h2 {
+    font-size: 1.4em;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.md h3, .commentarea h3, .wiki-page .wiki-page-content .md .wiki h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+/* General markup */
+/* reddit companion + sticky announcements fix */
+html {
+    position: relative;
+}
+
+body {
+    background-color: #C9D6E2;
+    color: #000000;
+}
+
+

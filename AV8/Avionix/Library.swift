@@ -29,7 +29,7 @@ public func dbg(_ items: Any..., functionName: StaticString = #function, fileNam
 }
 
 @available(*, deprecated)
-public func TODO<T>(_ msg: String = "TODO") -> T { fatalError(msg) }
+public func die<T>(_ msg: String = "DIE") -> T { fatalError(msg) }
 
 @available(*, deprecated)
 public func FIXME<T>(_ value: T) -> T { return value }
@@ -306,29 +306,29 @@ public func windCorrectionAngle(wind: Vector, airspeed: Speed, heading: Angle) -
 
 //public extension Speed {
 //    public static func groundspeed(directions: Direction.Pair, speeds: (tas: Speed, ws: Speed)) -> Speed {
-//        return TODO()
+//        return die()
 //    }
 //
 //    public static func windspeed(directions: Direction.Pair, speeds: (tas: Speed, gs: Speed)) -> Speed {
-//        return TODO()
+//        return die()
 //    }
 //
 //    public static func airspeed(directions: Direction.Pair, speeds: (gs: Speed, ws: Speed)) -> Speed {
-//        return TODO()
+//        return die()
 //    }
 //}
 //
 //public extension Angle {
 //    public static func heading(velocities: Velocity.Pair, angles: (crs: Angle, wd: Angle)) -> Angle {
-//        return TODO()
+//        return die()
 //    }
 //
 //    public static func course(velocities: Velocity.Pair, angles: (hdg: Angle, wd: Angle)) -> Angle {
-//        return TODO()
+//        return die()
 //    }
 //
 //    public static func winddirection(velocities: Velocity.Pair, angles: (crs: Angle, hdg: Angle)) -> Angle {
-//        return TODO()
+//        return die()
 //    }
 //}
 
@@ -345,7 +345,7 @@ private func groundspeed(crs: Angle, wd: Angle, tas: Speed, ws: Speed) -> Speed 
 }
 
 private func airspeed(crs: Angle, hdg: Angle, wd: Angle, gs: Speed, ws: Speed) -> Speed {
-    return TODO()
+    return die()
 }
 
 
@@ -366,11 +366,11 @@ private func heading(crs: Angle, wd: Angle, tas: Speed, ws: Speed) -> Angle {
 }
 
 private func wind(air: Vector, ground: Vector) -> Vector {
-    return TODO()
+    return die()
 }
 
 private func air(wind: Vector, ground: Vector) -> Vector {
-    return TODO()
+    return die()
 }
 
 //private func ground(air: Vector, wind: Vector) -> Vector {
