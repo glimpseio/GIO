@@ -41,7 +41,7 @@
       location = "group:Glint/Glint.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Glimpse/Glimpse.xcodeproj">
+      location = "group:/opt/src/glimpse/GIO/Glimpse/GlimpseOLD.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Enfont/Enfont.xcodeproj">

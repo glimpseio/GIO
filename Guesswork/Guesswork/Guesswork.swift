@@ -96,7 +96,7 @@ final class AppDelegate: TriptychAppDelegate {
 }
 
 /// The document type for the app
-final class Document: NSDocument {
+final class Document: GlueDocument {
     @objc dynamic var nodes: [TikiNode] = []
     
     override init() {
@@ -104,10 +104,6 @@ final class Document: NSDocument {
     }
 
     private func setupUndoSupport() {
-    }
-
-    override class var autosavesInPlace: Bool {
-        return false
     }
 
     // example errors:
