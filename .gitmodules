@@ -1,6 +1,12 @@
 [submodule "InterScript"]
 	path = InterScript
 	url = https://github.com/glimpseio/InterScript.git
+[submodule "GApp"]
+	path = GApp
+	url = https://github.com/glimpseio/GApp.git
+[submodule "SQLite"]
+	path = SQLite
+	url = https://github.com/glimpseio/SQLite.git
 [submodule "Glean"]
 	path = Glean
 	url = https://github.com/glimpseio/Glean.git
@@ -31,9 +37,6 @@
 [submodule "ChannelZ"]
 	path = ChannelZ
 	url = https://github.com/glimpseio/ChannelZ.git
-[submodule "SQLite.swift"]
-	path = SQLite
-	url = https://github.com/stephencelis/SQLite.swift.git
 [BricBrac "BricBrac"]
 	master = master
 	masterx = master
