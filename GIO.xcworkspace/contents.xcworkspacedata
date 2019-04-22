@@ -28,22 +28,4 @@
    <FileRef
       location = "group:ChannelZ/ChannelZ.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:GlimpseXML/GlimpseXML.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:AV8/AV8.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Guesswork/Guesswork.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Glint/Glint.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:/opt/src/glimpse/GIO/Glimpse/GlimpseOLD.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Enfont/Enfont.xcodeproj">
-   </FileRef>
 </Workspace>
