@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/opt/src/glimpse/GIO/GApp/GApp.xcodeproj">
+      location = "group:GApp/GApp.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Glib/Glib.xcodeproj">
