@@ -22,9 +22,6 @@
 [submodule "Glance"]
 	path = Glance
 	url = https://github.com/glimpseio/Glance.git
-[submodule "Enfont"]
-	path = Enfont
-	url = https://github.com/glimpseio/Enfont.git
 [submodule "Kanji"]
 	path = Kanji
 	url = https://github.com/glimpseio/Kanji.git
