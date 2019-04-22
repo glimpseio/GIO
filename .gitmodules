@@ -13,9 +13,6 @@
 [submodule "Glue"]
 	path = Glue
 	url = https://github.com/glimpseio/Glue.git
-[submodule "Glimpse"]
-	path = Glimpse
-	url = https://github.com/glimpseio/Glimpse.git
 [submodule "Glib"]
 	path = Glib
 	url = https://github.com/glimpseio/Glib.git
