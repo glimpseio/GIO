@@ -283,6 +283,9 @@
                   Identifier = "DB2ConnectorTests">
                </Test>
                <Test
+                  Identifier = "MySQLConnectorTests">
+               </Test>
+               <Test
                   Identifier = "OracleConnectorTests">
                </Test>
                <Test
