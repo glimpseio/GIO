@@ -4,9 +4,6 @@
 [submodule "GApp"]
 	path = GApp
 	url = https://github.com/glimpseio/GApp.git
-[submodule "SQLite"]
-	path = SQLite
-	url = https://github.com/glimpseio/SQLite.git
 [submodule "Glean"]
 	path = Glean
 	url = https://github.com/glimpseio/Glean.git
