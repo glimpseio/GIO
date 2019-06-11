@@ -5,9 +5,6 @@
       location = "group:GApp/GApp.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Glib/Glib.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:Glue/Glue.xcodeproj">
    </FileRef>
    <FileRef
@@ -21,6 +18,9 @@
    </FileRef>
    <FileRef
       location = "group:Kanji/Kanji.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Glib/Glib.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:BricBrac/BricBrac.xcodeproj">
