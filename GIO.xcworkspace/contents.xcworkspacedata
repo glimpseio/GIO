@@ -28,4 +28,10 @@
    <FileRef
       location = "group:ChannelZ/ChannelZ.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:EssVeeGee/EssVeeGee.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Plotify/Plotify.xcodeproj">
+   </FileRef>
 </Workspace>
