@@ -1,3 +1,6 @@
+[submodule "Plotify"]
+	path = Plotify
+	url = https://github.com/glimpseio/Plotify.git
 [submodule "InterScript"]
 	path = InterScript
 	url = https://github.com/glimpseio/InterScript.git
@@ -56,4 +59,6 @@
 [Kanji "Kanji"]
 	master = master
 [SQLite "SQLite"]
+	master = master
+[Plotify "Plotify"]
 	master = master
