@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Plotify/Plotify.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:GApp/GApp.xcodeproj">
    </FileRef>
    <FileRef
@@ -27,8 +30,5 @@
    </FileRef>
    <FileRef
       location = "group:ChannelZ/ChannelZ.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Plotify/Plotify.xcodeproj">
    </FileRef>
 </Workspace>
