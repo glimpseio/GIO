@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../../../../System/Volumes/Data/opt/src/glimpse/GIO/Vektorz/Vektorz.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Plotify/Plotify.xcodeproj">
    </FileRef>
    <FileRef
