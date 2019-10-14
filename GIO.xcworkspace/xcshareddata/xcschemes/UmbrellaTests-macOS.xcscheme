@@ -235,7 +235,7 @@
             </BuildableReference>
          </TestableReference>
          <TestableReference
-            skipped = "NO"
+            skipped = "YES"
             testExecutionOrdering = "random">
             <BuildableReference
                BuildableIdentifier = "primary"
@@ -359,6 +359,28 @@
                BuildableName = "KanjiVMTests.xctest"
                BlueprintName = "KanjiVMTests"
                ReferencedContainer = "container:Kanji/Kanji.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            testExecutionOrdering = "random">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "49ABE9A322E2190D007142FF"
+               BuildableName = "GlimpseTests.xctest"
+               BlueprintName = "GlimpseTests"
+               ReferencedContainer = "container:GApp/GApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            testExecutionOrdering = "random">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "49ABE9AE22E2190D007142FF"
+               BuildableName = "GlimpseUITests.xctest"
+               BlueprintName = "GlimpseUITests"
+               ReferencedContainer = "container:GApp/GApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
