@@ -49,7 +49,7 @@
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
-            buildForTesting = "YES"
+            buildForTesting = "NO"
             buildForRunning = "NO"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
@@ -188,6 +188,20 @@
                ReferencedContainer = "container:Kanji/Kanji.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "49ABE9A322E2190D007142FF"
+               BuildableName = "GlimpseTests.xctest"
+               BlueprintName = "GlimpseTests"
+               ReferencedContainer = "container:GApp/GApp.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -232,17 +246,6 @@
                BuildableName = "ChannelZTests.xctest"
                BlueprintName = "ChannelZTests"
                ReferencedContainer = "container:ChannelZ/ChannelZ.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "YES"
-            testExecutionOrdering = "random">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "49F457D92028A48500C67A5B"
-               BuildableName = "GAppTests.xctest"
-               BlueprintName = "GAppTests"
-               ReferencedContainer = "container:GApp/GApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -359,17 +362,6 @@
                BuildableName = "KanjiVMTests.xctest"
                BlueprintName = "KanjiVMTests"
                ReferencedContainer = "container:Kanji/Kanji.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            testExecutionOrdering = "random">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "49ABE9A322E2190D007142FF"
-               BuildableName = "GlimpseTests.xctest"
-               BlueprintName = "GlimpseTests"
-               ReferencedContainer = "container:GApp/GApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
