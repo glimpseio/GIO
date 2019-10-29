@@ -1,6 +1,3 @@
-[submodule "Plotify"]
-	path = Plotify
-	url = https://github.com/glimpseio/Plotify.git
 [submodule "InterScript"]
 	path = InterScript
 	url = https://github.com/glimpseio/InterScript.git
@@ -31,9 +28,11 @@
 [submodule "ChannelZ"]
 	path = ChannelZ
 	url = https://github.com/glimpseio/ChannelZ.git
+[submodule "WorkFormat"]
+	path = WorkFormat
+	url = https://github.com/glimpseio/WorkFormat
 [BricBrac "BricBrac"]
 	master = master
-	masterx = master
 [ChannelZ]
 	ChannelZ = master
 [ChannelZ "ChannelZ"]
@@ -60,8 +59,5 @@
 	master = master
 [SQLite "SQLite"]
 	master = master
-[Plotify "Plotify"]
+[WorkFormat "WorkFormat"]
 	master = master
-[submodule "WorkFormat"]
-	path = WorkFormat
-	url = https://github.com/glimpseio/WorkFormat
