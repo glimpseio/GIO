@@ -62,3 +62,6 @@
 	master = master
 [Plotify "Plotify"]
 	master = master
+[submodule "WorkFormat"]
+	path = WorkFormat
+	url = https://github.com/glimpseio/WorkFormat
