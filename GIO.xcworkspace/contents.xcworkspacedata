@@ -28,4 +28,7 @@
    <FileRef
       location = "group:ChannelZ/ChannelZ.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:WorkFormat/WorkFormat.xcodeproj">
+   </FileRef>
 </Workspace>

@@ -202,6 +202,20 @@
                ReferencedContainer = "container:GApp/GApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "WorkFormat::WorkFormatTests"
+               BuildableName = "WorkFormatTests.xctest"
+               BlueprintName = "WorkFormatTests"
+               ReferencedContainer = "container:WorkFormat/WorkFormat.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
