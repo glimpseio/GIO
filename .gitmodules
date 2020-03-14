@@ -43,9 +43,7 @@
 	master = master
 [Glean "Glean"]
 	master = master
-[Glin "Glib"]
-	master = master
-[Glimpse "Glimpse"]
+[Glib "Glib"]
 	master = master
 [Glib "Glib"]
 	master = master
