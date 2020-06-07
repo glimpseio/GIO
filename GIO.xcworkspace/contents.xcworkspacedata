@@ -2,10 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:GApp/GApp.xcodeproj">
+      location = "group:/opt/src/glimpse/GIO/GApp/GUI.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Glance/Glance.xcodeproj">
+      location = "group:/opt/src/glimpse/GIO/Glance/Glance.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Glue/Glue.xcodeproj">
@@ -14,13 +14,13 @@
       location = "group:Glean/Glean.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Glib/Glib.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:InterScript/InterScript.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Kanji/Kanji.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Glib/Glib.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:BricBrac/BricBrac.xcodeproj">
