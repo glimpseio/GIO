@@ -5,10 +5,10 @@
       location = "group:GApp/GApp.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Glue/Glue.xcodeproj">
+      location = "group:Glance/Glance.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Glance/Glance.xcodeproj">
+      location = "group:Glue/Glue.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Glean/Glean.xcodeproj">
