@@ -59,7 +59,7 @@
                BlueprintIdentifier = "49F457D92028A48500C67A5B"
                BuildableName = "GAppTests.xctest"
                BlueprintName = "GAppTests"
-               ReferencedContainer = "container:GApp/GUI.xcodeproj">
+               ReferencedContainer = "container:GApp/GApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -199,7 +199,7 @@
                BlueprintIdentifier = "49ABE9A322E2190D007142FF"
                BuildableName = "GlimpseTests.xctest"
                BlueprintName = "GlimpseTests"
-               ReferencedContainer = "container:GApp/GUI.xcodeproj">
+               ReferencedContainer = "container:GApp/GApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -386,7 +386,7 @@
                BlueprintIdentifier = "490DF95E22B17B5F00366AF1"
                BuildableName = "GlimpseUITests.xctest"
                BlueprintName = "GlimpseUITests"
-               ReferencedContainer = "container:GApp/GUI.xcodeproj">
+               ReferencedContainer = "container:GApp/GApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
