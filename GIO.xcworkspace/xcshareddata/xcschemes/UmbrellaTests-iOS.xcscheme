@@ -59,7 +59,7 @@
                BlueprintIdentifier = "49F457D92028A48500C67A5B"
                BuildableName = "GUITests.xctest"
                BlueprintName = "GUITests"
-               ReferencedContainer = "container:GApp/GUI.xcodeproj">
+               ReferencedContainer = "container:GUI/GUI.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry

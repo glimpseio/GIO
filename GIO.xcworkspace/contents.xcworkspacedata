@@ -2,10 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/opt/src/glimpse/GIO/GApp/GUI.xcodeproj">
+      location = "group:GUI/GUI.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/opt/src/glimpse/GIO/Glance/Glance.xcodeproj">
+      location = "group:Glance/Glance.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Glue/Glue.xcodeproj">
