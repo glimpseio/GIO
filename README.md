@@ -1,16 +1,16 @@
 
-Building:
+## Check out Glimpse and submodules:
 
-  * `git clone --recursive https://github.com/glimpseio/GIO.git`
-  * `cd GIO`
-  * `cd Glance/Glance/js/vega`
-  * `npm install && npm run build && npm test`
-  * `cd ../../../../`
-
-  * `cd Glance/Glance/js/vega-lite`
-  * `npm install && npm run build && npm test`
-  * `cd ../../../../`
+```bash
+$ git clone --recurse-submodules --remote-submodules https://github.com/glimpseio/GIO.git
+```
  
-  * Open `GIO.xcworkspace` and run the `Glimpse`/`My Mac` target
-  * Create a new sample with `File`->`New` and load a sample spec with `View`->`Load Sample` (some specs will fail to load; keep trying until one works)
+## Run all the tests:
 
+```bash
+$ xcodebuild -workspace GIO/GIO.xcworkspace -scheme GlimpseAppTests test
+```
+
+## Running the app:
+
+  * Open `GIO.xcworkspace` and run the `Glimpse`/`My Mac` target
