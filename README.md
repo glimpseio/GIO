@@ -3,6 +3,7 @@
 
 ```bash
 $ git clone --recurse-submodules --remote-submodules https://github.com/glimpseio/GIO.git
+$ git submodule foreach git checkout master
 ```
  
 ## Run all the tests:
