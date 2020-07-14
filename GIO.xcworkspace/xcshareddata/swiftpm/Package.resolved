@@ -20,6 +20,15 @@
         }
       },
       {
+        "package": "swift-numerics",
+        "repositoryURL": "https://github.com/apple/swift-numerics",
+        "state": {
+          "branch": null,
+          "revision": "110beefe0b9a4af05b09f2d33faf52740d9229a7",
+          "version": "0.0.6"
+        }
+      },
+      {
         "package": "SwiftProtobuf",
         "repositoryURL": "https://github.com/apple/swift-protobuf/",
         "state": {
