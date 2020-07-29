@@ -5,6 +5,9 @@
 $ git clone --jobs=20 --recurse-submodules --remote-submodules https://github.com/glimpseio/GIO.git
 ```
  
+git checkout 'master@{2020-07-28 12:30:00}'
+
+
 ## Update `master`:
 
 $ git pull --recurse-submodules --jobs=20
