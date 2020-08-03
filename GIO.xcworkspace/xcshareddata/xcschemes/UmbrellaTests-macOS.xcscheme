@@ -85,8 +85,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7E503FEF1C9073B600103E7A"
-               BuildableName = "VegaLiteModelTests.xctest"
-               BlueprintName = "VegaLiteModelTests"
+               BuildableName = "VLModelTests.xctest"
+               BlueprintName = "VLModelTests"
                ReferencedContainer = "container:Glance/Glance.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -99,8 +99,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7E34B1791C68DBCD00E50A71"
-               BuildableName = "VegaModelTests.xctest"
-               BlueprintName = "VegaModelTests"
+               BuildableName = "VGModelTests.xctest"
+               BlueprintName = "VGModelTests"
                ReferencedContainer = "container:Glance/Glance.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -281,8 +281,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7E503FEF1C9073B600103E7A"
-               BuildableName = "VegaLiteModelTests.xctest"
-               BlueprintName = "VegaLiteModelTests"
+               BuildableName = "VLModelTests.xctest"
+               BlueprintName = "VLModelTests"
                ReferencedContainer = "container:Glance/Glance.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -291,8 +291,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7E34B1791C68DBCD00E50A71"
-               BuildableName = "VegaModelTests.xctest"
-               BlueprintName = "VegaModelTests"
+               BuildableName = "VGModelTests.xctest"
+               BlueprintName = "VGModelTests"
                ReferencedContainer = "container:Glance/Glance.xcodeproj">
             </BuildableReference>
          </TestableReference>
