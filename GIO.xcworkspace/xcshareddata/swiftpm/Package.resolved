@@ -11,6 +11,15 @@
         }
       },
       {
+        "package": "MicroMemo",
+        "repositoryURL": "https://github.com/marcprux/MicroMemo.git",
+        "state": {
+          "branch": "master",
+          "revision": "19558af378319e45c03b9ed1fa1d8caf331632ce",
+          "version": null
+        }
+      },
+      {
         "package": "swift-nio",
         "repositoryURL": "https://github.com/apple/swift-nio.git",
         "state": {
@@ -35,6 +44,24 @@
           "branch": null,
           "revision": "7790acf0a81d08429cb20375bf42a8c7d279c5fe",
           "version": "1.8.0"
+        }
+      },
+      {
+        "package": "SwiftUIX",
+        "repositoryURL": "https://github.com/SwiftUIX/SwiftUIX",
+        "state": {
+          "branch": "master",
+          "revision": "8a9a3baf5c62b7d9f11e50d44857dfbc9c587d8a",
+          "version": null
+        }
+      },
+      {
+        "package": "XMLCoder",
+        "repositoryURL": "https://github.com/MaxDesiatov/XMLCoder.git",
+        "state": {
+          "branch": null,
+          "revision": "ac411bd6ab342780be0dfe6f679410f791d751d9",
+          "version": "0.11.1"
         }
       },
       {
