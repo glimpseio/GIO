@@ -20,9 +20,6 @@
       location = "group:InterScript/InterScript.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Kanji/Kanji.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:BricBrac/BricBrac.xcodeproj">
    </FileRef>
    <FileRef
