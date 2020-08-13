@@ -2,6 +2,7 @@
 
 ## Build generated
 build/
+.build/
 DerivedData/
 
 ## Various settings
@@ -16,6 +17,7 @@ DerivedData/
 xcuserdata/
 
 ## Other
+.*.swp
 *.moved-aside
 *.xcuserstate
 

@@ -16,7 +16,7 @@ $ git pull --recurse-submodules --jobs=20
 ## Run all the tests:
 
 ```bash
-$ xcodebuild -workspace GIO/GIO.xcworkspace -scheme GlimpseAppTests test
+$ xcodebuild -scheme GlimpseAppTests test
 ```
 
 ## Running the app:
