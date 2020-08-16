@@ -11,11 +11,11 @@
         }
       },
       {
-        "package": "MicroMemo",
-        "repositoryURL": "https://github.com/marcprux/MicroMemo.git",
+        "package": "MemoZ",
+        "repositoryURL": "https://github.com/marcprux/MemoZ",
         "state": {
           "branch": "master",
-          "revision": "9ba5c5ec84f741a696b8374859c3d068dc02f433",
+          "revision": "d0226ac10fa051738a1ff1b70617bcd5a7c8b8a3",
           "version": null
         }
       },
