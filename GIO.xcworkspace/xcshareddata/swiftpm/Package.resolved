@@ -47,15 +47,6 @@
         }
       },
       {
-        "package": "SwiftUIX",
-        "repositoryURL": "https://github.com/SwiftUIX/SwiftUIX",
-        "state": {
-          "branch": "master",
-          "revision": "4272a79abb0e382297daf7afcf27b07b0e629945",
-          "version": null
-        }
-      },
-      {
         "package": "XMLCoder",
         "repositoryURL": "https://github.com/MaxDesiatov/XMLCoder.git",
         "state": {
