@@ -17,13 +17,10 @@
       location = "group:Glib/Glib.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:InterScript/InterScript.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:BricBrac/BricBrac.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:ChannelZ/ChannelZ.xcodeproj">
+      location = "group:InterScript/InterScript.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:WorkFormat/WorkFormat.xcodeproj">
