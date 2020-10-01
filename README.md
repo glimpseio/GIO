@@ -39,29 +39,29 @@ The Glimpse project is broken into a number of different workspaces, each which 
 
 A high-level overview of the modules is as follows:
 
-### [BricBrac](https://github.com/glimpseio/BricBrac)
- • [BricBrac/BricBrac](https://github.com/glimpseio/BricBrac/tree/master/Sources/BricBrac)
- • [BricBrac/Curio](https://github.com/glimpseio/BricBrac/tree/master/Sources/Curio)
+### [BricBrac](https://github.com/glimpseio/BricBrac): Data structures and utilities for `Codable` models
+ * [BricBrac/BricBrac](https://github.com/glimpseio/BricBrac/tree/master/Sources/BricBrac): Provides `OneOf2` *"Either"* type and other affordances
+ * [BricBrac/Curio](https://github.com/glimpseio/BricBrac/tree/master/Sources/Curio): Generates `Codable` structs from [JSON Schema](http://json-schema.org) definitions
  
  ### [Glib](https://github.com/glimpseio/Glib)
- • [Glib/Glib](https://github.com/glimpseio/Glib/tree/master/Glib)
- • [Glib/Glob](https://github.com/glimpseio/Glib/tree/master/Glob)
+ * [Glib/Glib](https://github.com/glimpseio/Glib/tree/master/Glib)
+ * [Glib/Glob](https://github.com/glimpseio/Glib/tree/master/Glob)
  
  ### [Glean](https://github.com/glimpseio/Glean)
- • [Glean/GleanModel](https://github.com/glimpseio/Glean/tree/master/Glean)
- • [Glean/Glean](https://github.com/glimpseio/Glean/tree/master/GleanModel)
+ * [Glean/GleanModel](https://github.com/glimpseio/Glean/tree/master/Glean)
+ * [Glean/Glean](https://github.com/glimpseio/Glean/tree/master/GleanModel)
 
 ### [Glance](https://github.com/glimpseio/Glance)
-• [Glance/Glance](https://github.com/glimpseio/Glance/tree/master/Glance)
-• [Glance/VLModel](https://github.com/glimpseio/Glance/tree/master/VLModel)
+ * [Glance/Glance](https://github.com/glimpseio/Glance/tree/master/Glance)
+ * [Glance/VLModel](https://github.com/glimpseio/Glance/tree/master/VLModel)
  
  ### [Glue](https://github.com/glimpseio/Glue)
- • [Glue/Glue](https://github.com/glimpseio/Glue/tree/master/Glue)
- • [Glue/GlueUI](https://github.com/glimpseio/Glue/tree/master/GlueUI)
+ * [Glue/Glue](https://github.com/glimpseio/Glue/tree/master/Glue)
+ * [Glue/GlueUI](https://github.com/glimpseio/Glue/tree/master/GlueUI)
  
  ### [GUI](https://github.com/glimpseio/GUI)
- • [GUI/GlimpseModel](https://github.com/glimpseio/GUI/tree/master/GlimpseModel)
- • [GUI/GlimpseUI](https://github.com/glimpseio/GUI/tree/master/GlimpseUI)
- • [GUI/Glimpse](https://github.com/glimpseio/GUI/tree/master/Glimpse)
- • [GUI/GlimpseApp](https://github.com/glimpseio/GUI/tree/master/GlimpseApp)
+ * [GUI/GlimpseModel](https://github.com/glimpseio/GUI/tree/master/GlimpseModel)
+ * [GUI/GlimpseUI](https://github.com/glimpseio/GUI/tree/master/GlimpseUI)
+ * [GUI/Glimpse](https://github.com/glimpseio/GUI/tree/master/Glimpse)
+ * [GUI/GlimpseApp](https://github.com/glimpseio/GUI/tree/master/GlimpseApp)
 
