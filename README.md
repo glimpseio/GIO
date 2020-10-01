@@ -41,7 +41,7 @@ A high-level overview of the modules is as follows:
 
 ### [BricBrac](https://github.com/glimpseio/BricBrac)
 Data structures and utilities for `Codable` models. 15k SLOC.
- * [BricBrac/BricBrac](https://github.com/glimpseio/BricBrac/tree/master/Sources/BricBrac): Provides JSON utilities and structures for `Codable` support, such as a `OneOf2` *"Either"* type.
+ * [BricBrac/BricBrac](https://github.com/glimpseio/BricBrac/tree/master/Sources/BricBrac): Provides JSON utilities and structures for `Codable` support, such as a `Bric` enum representing JSON data types and a `OneOf2` *"Either"* type.
  * [BricBrac/Curio](https://github.com/glimpseio/BricBrac/tree/master/Sources/Curio): Swift `struct` code-generator for [JSON Schema](http://json-schema.org) definitions.
  
  ### [Glib](https://github.com/glimpseio/Glib)
