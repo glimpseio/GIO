@@ -40,10 +40,10 @@ The Glimpse project is broken into a number of different workspaces, each which 
 A high-level overview of the modules is as follows:
 
 ### [BricBrac](https://github.com/glimpseio/BricBrac): Data structures and utilities for `Codable` models
- * [BricBrac/BricBrac](https://github.com/glimpseio/BricBrac/tree/master/Sources/BricBrac): Provides `OneOf2` *"Either"* type and other affordances
- * [BricBrac/Curio](https://github.com/glimpseio/BricBrac/tree/master/Sources/Curio): Generates `Codable` structs from [JSON Schema](http://json-schema.org) definitions
+ * [BricBrac/BricBrac](https://github.com/glimpseio/BricBrac/tree/master/Sources/BricBrac): Provides `OneOf2` *"Either"* type and other affordances. **cross-platform**
+ * [BricBrac/Curio](https://github.com/glimpseio/BricBrac/tree/master/Sources/Curio): (cross-platform) Generates `Codable` structs from [JSON Schema](http://json-schema.org) definitions. **cross-platform** Depends on: [BricBrac](#BricBrac)
  
- ### [Glib](https://github.com/glimpseio/Glib)
+ ### [Glib](https://github.com/glimpseio/Glib): Common shared utilities
  * [Glib/Glib](https://github.com/glimpseio/Glib/tree/master/Glib)
  * [Glib/Glob](https://github.com/glimpseio/Glib/tree/master/Glob)
  
