@@ -39,29 +39,35 @@ The Glimpse project is broken into a number of different workspaces, each which 
 
 A high-level overview of the modules is as follows:
 
-### [BricBrac](https://github.com/glimpseio/BricBrac): Data structures and utilities for `Codable` models
- * [BricBrac/BricBrac](https://github.com/glimpseio/BricBrac/tree/master/Sources/BricBrac): Provides `OneOf2` *"Either"* type and other affordances. **cross-platform**
- * [BricBrac/Curio](https://github.com/glimpseio/BricBrac/tree/master/Sources/Curio): (cross-platform) Generates `Codable` structs from [JSON Schema](http://json-schema.org) definitions. **cross-platform** Depends on: [BricBrac](#BricBrac)
+### [BricBrac](https://github.com/glimpseio/BricBrac)
+Data structures and utilities for `Codable` models. 15k SLOC.
+ * [BricBrac/BricBrac](https://github.com/glimpseio/BricBrac/tree/master/Sources/BricBrac): Provides `OneOf2` *"Either"* type and other utilities for `Codable` support.
+ * [BricBrac/Curio](https://github.com/glimpseio/BricBrac/tree/master/Sources/Curio): Generates `Codable` structs from [JSON Schema](http://json-schema.org) definitions.
  
- ### [Glib](https://github.com/glimpseio/Glib): Common shared utilities
- * [Glib/Glib](https://github.com/glimpseio/Glib/tree/master/Glib)
- * [Glib/Glob](https://github.com/glimpseio/Glib/tree/master/Glob)
+ ### [Glib](https://github.com/glimpseio/Glib)
+ Common shared utilities for parsing, logging, platform interaction, etc. 22k SLOC.
+ * [Glib/Glib](https://github.com/glimpseio/Glib/tree/master/Glib): Utilities that have no dependencies outside of `Foundation`.
+ * [Glib/Glob](https://github.com/glimpseio/Glib/tree/master/Glob): Utilities with dependencies (such as `CoreGraphics` and `JavaScriptCore`)
  
  ### [Glean](https://github.com/glimpseio/Glean)
- * [Glean/GleanModel](https://github.com/glimpseio/Glean/tree/master/Glean)
- * [Glean/Glean](https://github.com/glimpseio/Glean/tree/master/GleanModel)
+ Data connections, importing, exporting, and storage. 5k SLOC.
+ * [Glean/GleanModel](https://github.com/glimpseio/Glean/tree/master/Glean): Drivers for connecting to various data sources.
+ * [Glean/Glean](https://github.com/glimpseio/Glean/tree/master/GleanModel): Dependency-free data representation `Glean` definitions.
+
+### [Glue](https://github.com/glimpseio/Glue)
+General-purpose GUI widgets & utilities. 21k SLOC.
+* [Glue/Glue](https://github.com/glimpseio/Glue/tree/master/Glue): AppKit & UIKit components.
+* [Glue/GlueUI](https://github.com/glimpseio/Glue/tree/master/GlueUI): SwiftUI components.
 
 ### [Glance](https://github.com/glimpseio/Glance)
- * [Glance/Glance](https://github.com/glimpseio/Glance/tree/master/Glance)
- * [Glance/VLModel](https://github.com/glimpseio/Glance/tree/master/VLModel)
- 
- ### [Glue](https://github.com/glimpseio/Glue)
- * [Glue/Glue](https://github.com/glimpseio/Glue/tree/master/Glue)
- * [Glue/GlueUI](https://github.com/glimpseio/Glue/tree/master/GlueUI)
+Data visualization using the [Vega-Lite](https://vega.github.io) grammer. 38k SLOC.
+ * [Glance/VLModel](https://github.com/glimpseio/Glance/tree/master/VLModel): `Curio`-generated struct representing the [vega-lite](https://vega.github.io/vega-lite/docs/spec.html) visualization specification.
+ * [Glance/Glance](https://github.com/glimpseio/Glance/tree/master/Glance): Renders `VLModel` in an embedded browser or headlessly to various output formats: SVG, PNG, PDF, & HTML.
  
  ### [GUI](https://github.com/glimpseio/GUI)
- * [GUI/GlimpseModel](https://github.com/glimpseio/GUI/tree/master/GlimpseModel)
- * [GUI/GlimpseUI](https://github.com/glimpseio/GUI/tree/master/GlimpseUI)
- * [GUI/Glimpse](https://github.com/glimpseio/GUI/tree/master/Glimpse)
- * [GUI/GlimpseApp](https://github.com/glimpseio/GUI/tree/master/GlimpseApp)
+ The Glimpse application. 27k SLOC.
+ * [GUI/GlimpseModel](https://github.com/glimpseio/GUI/tree/master/GlimpseModel): The data model for a `.glimpse` document, which is stored as a compressed JSON representation of a `Glance.VizSpec`
+ * [GUI/GlimpseUI](https://github.com/glimpseio/GUI/tree/master/GlimpseUI): SwiftUI components specific to Glimpse.
+ * [GUI/Glimpse](https://github.com/glimpseio/GUI/tree/master/Glimpse): The `NSApplication` entry point to Glimpse.app, containing the `NSDocument` implementation of `GlimpseModel` the the `NSWindowController` that manages the application lifecycle and hosts the `GlimpseUI` components.
+ * [GUI/GlimpseApp](https://github.com/glimpseio/GUI/tree/master/GlimpseApp): Prototype of iOS version of Glimpse.
 
