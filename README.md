@@ -35,14 +35,14 @@ Note that this will run all the tests in all the dependent modules as well. whic
 
 ## Modules & Workspaces
 
-The Glimpse project is broken into a number of different workspaces, each which contains one more more module and unit tests. This modularity provides separations of concerns and help build performance.
+The Glimpse project is divided into a number of different workspaces, each which contains one more more module and unit tests. This modularity provides separation of concerns and help build performance.
 
 A high-level overview of the modules is as follows:
 
 ### [BricBrac](https://github.com/glimpseio/BricBrac)
 Data structures and utilities for `Codable` models. 15k SLOC.
- * [BricBrac/BricBrac](https://github.com/glimpseio/BricBrac/tree/master/Sources/BricBrac): Provides `OneOf2` *"Either"* type and other utilities for `Codable` support.
- * [BricBrac/Curio](https://github.com/glimpseio/BricBrac/tree/master/Sources/Curio): Generates `Codable` structs from [JSON Schema](http://json-schema.org) definitions.
+ * [BricBrac/BricBrac](https://github.com/glimpseio/BricBrac/tree/master/Sources/BricBrac): Provides JSON utilities and structures for `Codable` support, such as a `OneOf2` *"Either"* type.
+ * [BricBrac/Curio](https://github.com/glimpseio/BricBrac/tree/master/Sources/Curio): Swift `struct` code-generator for [JSON Schema](http://json-schema.org) definitions.
  
  ### [Glib](https://github.com/glimpseio/Glib)
  Common shared utilities for parsing, logging, platform interaction, etc. 22k SLOC.
@@ -50,7 +50,7 @@ Data structures and utilities for `Codable` models. 15k SLOC.
  * [Glib/Glob](https://github.com/glimpseio/Glib/tree/master/Glob): Utilities with dependencies (such as `CoreGraphics` and `JavaScriptCore`)
  
  ### [Glean](https://github.com/glimpseio/Glean)
- Data connections, importing, exporting, and storage. 5k SLOC.
+ Spreadsheet & flat-file parsing & database connections for importing, exporting, and processing data. 5k SLOC.
  * [Glean/GleanModel](https://github.com/glimpseio/Glean/tree/master/Glean): Drivers for connecting to various data sources.
  * [Glean/Glean](https://github.com/glimpseio/Glean/tree/master/GleanModel): Dependency-free data representation `Glean` definitions.
 
@@ -70,4 +70,3 @@ Data visualization using the [Vega-Lite](https://vega.github.io) grammer. 38k SL
  * [GUI/GlimpseUI](https://github.com/glimpseio/GUI/tree/master/GlimpseUI): SwiftUI components specific to Glimpse.
  * [GUI/Glimpse](https://github.com/glimpseio/GUI/tree/master/Glimpse): The `NSApplication` entry point to Glimpse.app, containing the `NSDocument` implementation of `GlimpseModel` the the `NSWindowController` that manages the application lifecycle and hosts the `GlimpseUI` components.
  * [GUI/GlimpseApp](https://github.com/glimpseio/GUI/tree/master/GlimpseApp): Prototype of iOS version of Glimpse.
-
