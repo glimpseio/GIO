@@ -39,6 +39,8 @@ The Glimpse project is divided into a number of different workspaces, each which
 
 A high-level overview of the modules is as follows:
 
+![](modules.png)
+
 ### [BricBrac](https://github.com/glimpseio/BricBrac)
 Data structures and utilities for `Codable` models. ~15k SLOC.
  * [BricBrac/BricBrac](https://github.com/glimpseio/BricBrac/tree/master/Sources/BricBrac): Provides JSON utilities and structures for `Codable` support, such as a `Bric` enum representing JSON data types and a `OneOf2` *"Either"* type.
