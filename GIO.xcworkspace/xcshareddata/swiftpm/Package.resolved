@@ -20,24 +20,6 @@
         }
       },
       {
-        "package": "swift-nio",
-        "repositoryURL": "https://github.com/apple/swift-nio.git",
-        "state": {
-          "branch": null,
-          "revision": "c3e2359c55cd8b47207ab7363b77c9c398a95294",
-          "version": "2.23.0"
-        }
-      },
-      {
-        "package": "swift-numerics",
-        "repositoryURL": "https://github.com/apple/swift-numerics",
-        "state": {
-          "branch": null,
-          "revision": "6b24333510e9044cf4716a07bed65eeed6bc6393",
-          "version": "0.0.8"
-        }
-      },
-      {
         "package": "SwiftProtobuf",
         "repositoryURL": "https://github.com/apple/swift-protobuf/",
         "state": {
