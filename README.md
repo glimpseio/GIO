@@ -88,7 +88,7 @@ In addition to the `store` model, `ViewModel` also contains a `state` of type `V
 > You should consider any data you write to the coder as purgeable and be prepared for it to be unavailable during subsequent launches.
 
 
-The logic in the `GlimpseModel` is all "headless", in that while it defines various properties that *could* be implemented by a graphical user interface (such as a "selection"), the operations that are performed on the model do not require any sort of interface. This makes much of the UI logic testable in `GlimpseModelTests` in a context-free environment.
+The logic in the `GlimpseModel.ViewModelState` is all "headless", in that while it defines various properties that *could* be implemented by a graphical user interface (such as a "selection"), the operations that are performed on the model do not require any sort of interface. This makes much of the UI logic testable in `GlimpseModelTests` in a context-free environment.
 
 The graphical user interface of Glimpse is implemented in the `GlimpseUI` framework. One common feature of nearly every `SwiftUI.View` implementation that interacts with the model is that they all contain a `GlimpseContext`, which provides access to the `ViewModelState` via the `vms` property:
 
@@ -104,10 +104,8 @@ struct LayerTitleEditingView : View {
 
 Because the `ViewModelState` is a tree of value types, undo and redo are supported by simply storing the current `ViewModelState` in the undo stack whenever a change is made. This is all handled automatically by the `GlimpseContext` in its `store`'s `willSet` property. An undo event is only triggered by changes to the `store` (since changes to the `state` like changing the current selected outline row or visible inspector tab shouldn't themselves be recorded as an undo-able event), but note that the *entire* `ViewModelState` is saved to the undo stack. This is so that when the action is un-done or re-done, the user interface state in the `ViewState` will be restored to its appearance at the time the `store` change occurred.
 
-In addition to the `ViewState`, some non-restorable and non-undoable state is stored in a `TransientViewState`, which is accessed in `GlimpseContext.tmp`. This structure contains shared user-interface properties that are explicitly *not* meant to be restorable, such as the currently focused items and whether the canvas and data grid are visible. To determine whether a new user interface property should be added to `ViewState` or `TransientViewState`, consider whether it makes sense to that user-interface feature should be part of the undo/redo process or not. Properties can be moved between the two structures between versions, so it generally makes sense to first add new properties to `TransientViewState` and then, if it makes sense, move them into `ViewState` later.
+In addition to the `ViewState`, some non-restorable and non-undoable state is stored in a `TransientViewState`, which is accessed in `GlimpseContext.tmp`. This structure contains shared user-interface properties that are explicitly *not* meant to be restorable, such as the currently focused items and whether the canvas and data grid are visible. To determine whether a new user interface property should be added to `ViewState` or `TransientViewState`, consider whether it makes sense to that user-interface feature should be part of the undo/redo process or not. 
 
-
-
-
+Properties can be moved between the two structures between versions, so it generally makes sense to first add new properties to `TransientViewState` and then, if it makes sense, move them into `ViewState` later. Note that making incompatible changes to the `ViewState` will simply cause the document loaded system to purge the old serialized version and start with a fresh new state: the only indication that the user has of this happening is that previously-opened documents may not have their user interface restored to the exact state that it was previously. This is in contrast to the properties in the `store`: making incompatible changes to the `GlimpseSpec` structure would result in earlier versions of `.glimpse` files being unreadable to future versions of Glimpse. Data in `GlimpseSpec` that needs to be migrated from previous versions should be fixed up in the `GlimpseSpec.migrate()` function.
 
 
