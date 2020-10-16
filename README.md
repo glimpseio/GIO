@@ -77,18 +77,34 @@ Data visualization using the [Vega-Lite](https://vega.github.io) grammer. ~38k S
 
 ### Basic Architecture
 
-#### Rendering & Exporting
-
 #### ViewModelState & SwiftUI
 
- * Store
- * State
- * Transient
+Glimpse follows a custom variant of the [Model–view–viewmodel (MVVM)](https://en.wikipedia.org/wiki/Model–view–viewmodel) design pattern. Most of the "business logic" of a `.glimpse` document is implement in the `GlimpseModel` framework, which defines a `ViewModel` struct. 
 
-##### A Note on Performance
+The `ViewModel` is a value type that must reference only to other value types. As such, it provides automatic conformance to `Equatable` and `Hashable`. The `ViewModel`'s model is a `store` property of type `GlimpseSpec`, which contains everything that will be serialized to a `.glimpse` file, which contains the compressed JSON output of `GlimpseSpec`'s `Codable` support). The store is loaded by the Cocoa `NSDocument` system when a `.glimpse` file is loaded by the user.
 
-### Design Philosophy
+In addition to the `store` model, `ViewModel` also contains a `state` of type `ViewState`, which contains the current state of the user-interface as pertains to the model. This includes things like the "current selection" and the list of expanded inspectors. The `ViewState` is `Codable`, but it is not stored in the `.glimpse` file with the `GlimpseSpec`: rather, it is automatically serialized and stores in the user's per-document settings by the Cocoa [State Restoration](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621461-encoderestorablestatewithcoder) process. If there are deserialization errors in the state then it is transparently thrown away by the document loading system and a fresh one is used. This has the consequence that properties can be added, removed, and renamed in the `ViewState` without causing errors for the user (unlike the JSON data serialized by the `GlimpseSpec`: those need to be completely backwards-compatible in order to support loading models from previous versions of Glimpse).
 
-## Documentation
+The logic in the `GlimpseModel` is all "headless", in that while it defines various properties that *could* be implemented by a graphical user interface (such as a "selection"), the operations that are performed on the model do not require any sort of interface. This makes much of the UI logic testable in `GlimpseModelTests` in a context-free environment.
+
+The graphical user interface of Glimpse is implemented in the `GlimpseUI` framework. One common feature of nearly every `SwiftUI.View` implementation that interacts with the model is that they all contain a `GlimpseContext`, which provides access to the `ViewModelState` via the `vms` property:
+
+```swift
+struct LayerTitleEditingView : View {
+    @EnvironmentObject var ctx: GlimpseContext
+    
+    var body: some View {
+        TextField("Layer Title", value: $ctx.vms.selectedLayer.title)
+    }
+}
+```
+
+Because the `ViewModelState` is a tree of value types, undo and redo are supported by simply storing the current `ViewModelState` in the undo stack whenever a change is made. This is all handled automatically by the `GlimpseContext` in its `store`'s `willSet` property. Note that which an undo event is only triggered by changes to the `store` (since changes to the `state` like changing the current selected outline row or visible inspector tab shouldn't themselves be recorded as an undo-able event), the entire `ViewModelState` is saved to the undo stack so that when the action is un-done or re-done, the user interface state in the `ViewState` will be restored to its appearance at the time the `store` change occurred.
+
+In addition to the `ViewState`, some non-restorable and non-undoable state is stored in a `TransientViewState`, which is accessed in `GlimpseContext.tmp`. This structure contains shared user-interface properties that are explicitly *not* meant to be restorable, such as the currently focused items and whether the canvas and data grid are visible. To determine whether a new user interface property should be added to `ViewState` or `TransientViewState`, consider whether it makes sense to that user-interface feature should be part of the undo/redo process or not. Properties can be moved between the two structures between versions, so it generally makes sense to first add new properties to `TransientViewState` and then, if it makes sense, move them into `ViewState` later.
+
+
+
+
 
 
