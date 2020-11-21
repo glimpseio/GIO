@@ -20,9 +20,6 @@
       location = "group:BricBrac/BricBrac.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:InterScript/InterScript.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:WorkFormat/WorkFormat.xcodeproj">
    </FileRef>
 </Workspace>
