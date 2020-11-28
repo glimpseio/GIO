@@ -35,11 +35,11 @@ Note that this will run all the tests in all the dependent modules as well. whic
 
 ## Repository organization
 
-The Glimpse project is divided into a number of different workspaces, each which contains one more more module and unit tests and is managed in its own separate repository. This modularity provides separation of concerns and help build performance.
+The Glimpse project is divided into a number of different workspaces, each which contains one more more module and unit tests and is managed in its own separate repository. This modularity provides separation of concerns and help build performance. In addition, maintaining separate repo
 
 A high-level overview of the modules is as follows:
 
-![](modules.png)
+![](glimpse_architecture.svg)
 
 ### [BricBrac](https://github.com/glimpseio/BricBrac)
 Data structures and utilities for `Codable` models. ~15k SLOC.
@@ -63,7 +63,8 @@ General-purpose GUI widgets & utilities. ~21k SLOC.
 
 ### [Glance](https://github.com/glimpseio/Glance)
 Data visualization using the [Vega-Lite](https://vega.github.io) grammer. ~38k SLOC.
- * [Glance/VLModel](https://github.com/glimpseio/Glance/tree/master/VLModel): `Curio`-generated struct representing the [vega-lite](https://vega.github.io/vega-lite/docs/spec.html) visualization specification.
+ * [Glance/VLModel](https://github.com/glimpseio/Glance/tree/master/VLModel): `Curio`-generated struct representing the [vega-lite](https://vega.github.io/vega-lite/docs/spec.html) visualization specification from [vega-lite-schema.json](https://github.com/glimpseio/Glance/blob/master/Glance/Resources/js/vega-lite-schema.json).
+ * [Glance/VegaGrammar](https://github.com/glimpseio/Glance/tree/master/VegaGrammar): Semantic layer atop `VLModel` that provides additional ergonomics and utilities, and eases the process of performing schema upgrades.
  * [Glance/Glance](https://github.com/glimpseio/Glance/tree/master/Glance): Renders `VLModel` in an embedded browser or headlessly to various output formats: SVG, PNG, PDF, & HTML.
  
  ### [GUI](https://github.com/glimpseio/GUI)

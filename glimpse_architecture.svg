@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1012px" height="386px" viewBox="0 0 1012 386" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Architecture</title>
+    <g id="Architecture" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="CoreFoundation" transform="translate(562.000000, 336.000000)">
+            <rect id="Rectangle" fill="#929292" opacity="0.682514009" x="0" y="0" width="450" height="50"></rect>
+            <text id="CoreFoundation" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="24" font-weight="bold" fill="#FFFFFF">
+                <tspan x="123.288" y="34">CoreFoundation</tspan>
+            </text>
+        </g>
+        <g id="ChannelZ" transform="translate(168.000000, 336.000000)">
+            <rect id="Rectangle" fill="#2657AF" opacity="0.682514009" x="0" y="0" width="162" height="50"></rect>
+            <text font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="24" font-weight="bold" fill="#FFFFFF">
+                <tspan x="26.112" y="34">ChannelZ</tspan>
+            </text>
+        </g>
+        <g id="BricBrac" transform="translate(336.000000, 336.000000)">
+            <rect id="Rectangle" fill="#2657AF" opacity="0.682514009" x="0" y="0" width="220" height="50"></rect>
+            <text font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="24" font-weight="bold" fill="#FFFFFF">
+                <tspan x="60.008" y="34">BricBrac</tspan>
+            </text>
+        </g>
+        <g id="Foundation" transform="translate(676.000000, 280.000000)">
+            <rect id="Rectangle" fill="#929292" opacity="0.682514009" x="0" y="0" width="336" height="50"></rect>
+            <text id="Foundation" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="24" font-weight="bold" fill="#FFFFFF">
+                <tspan x="93.852" y="34">Foundation</tspan>
+            </text>
+        </g>
+        <g id="JSC" transform="translate(562.000000, 280.000000)">
+            <rect id="Rectangle" fill="#929292" opacity="0.682514009" x="0" y="0" width="108" height="50"></rect>
+            <text id="JSC" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="24" font-weight="bold" fill="#FFFFFF">
+                <tspan x="21.168" y="34">JSC</tspan>
+            </text>
+        </g>
+        <g id="Glib" transform="translate(168.000000, 280.000000)">
+            <rect id="Rectangle" fill="#FFBD16" opacity="0.682514009" x="0" y="0" width="388" height="50"></rect>
+            <text font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="24" font-weight="bold" fill="#FFFFFF">
+                <tspan x="171.368" y="34">Glib</tspan>
+            </text>
+        </g>
+        <g id="JVM" transform="translate(0.000000, 280.000000)">
+            <rect id="Rectangle" fill="#5E5E5E" opacity="0.682514009" x="0" y="0" width="162" height="105"></rect>
+            <text font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="24" font-weight="bold" fill="#FFFFFF">
+                <tspan x="55.884" y="62">JVM</tspan>
+            </text>
+        </g>
+        <g id="AppKit/UIKit" transform="translate(713.000000, 224.000000)">
+            <rect id="Rectangle" fill="#929292" opacity="0.682514009" x="0" y="0" width="299" height="50"></rect>
+            <text id="AppKit/UIKit" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="24" font-weight="bold" fill="#FFFFFF">
+                <tspan x="68.284" y="34">AppKit/UIKit</tspan>
+            </text>
+        </g>
+        <g id="Glob" transform="translate(497.000000, 224.000000)">
+            <rect id="Rectangle" fill="#FFBD16" opacity="0.682514009" x="0" y="0" width="210" height="50"></rect>
+            <text font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="24" font-weight="bold" fill="#FFFFFF">
+                <tspan x="78.132" y="34">Glob</tspan>
+            </text>
+        </g>
+        <g id="VLModel" transform="translate(233.000000, 224.000000)">
+            <rect id="Rectangle" fill="#AF0327" opacity="0.682514009" x="0" y="0" width="258" height="50"></rect>
+            <text font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="24" font-weight="bold" fill="#FFFFFF">
+                <tspan x="78.792" y="34">VLModel</tspan>
+            </text>
+        </g>
+        <g id="Kanji" transform="translate(0.000000, 224.000000)">
+            <rect id="Rectangle" fill="#584A78" opacity="0.682514009" x="-5.68434189e-14" y="0" width="227" height="50"></rect>
+            <text font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="24" font-weight="bold" fill="#FFFFFF">
+                <tspan x="84.4" y="34">Kanji</tspan>
+            </text>
+        </g>
+        <g id="SwiftUI" transform="translate(744.000000, 168.000000)">
+            <rect id="Rectangle" fill="#929292" opacity="0.682514009" x="0" y="0" width="131" height="50"></rect>
+            <text id="SwiftUI" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="24" font-weight="bold" fill="#FFFFFF">
+                <tspan x="14.716" y="34">SwiftUI</tspan>
+            </text>
+        </g>
+        <g id="Glue" transform="translate(497.000000, 168.000000)">
+            <rect id="Rectangle" fill="#44B53C" opacity="0.682514009" x="0" y="0" width="241" height="50"></rect>
+            <text font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="24" font-weight="bold" fill="#FFFFFF">
+                <tspan x="94.292" y="34">Glue</tspan>
+            </text>
+        </g>
+        <g id="VegaGrammer" transform="translate(233.000000, 168.000000)">
+            <rect id="Rectangle" fill="#AF0327" opacity="0.682514009" x="0" y="0" width="258" height="50"></rect>
+            <text font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="24" font-weight="bold" fill="#FFFFFF">
+                <tspan x="47.028" y="34.3846154">VegaGrammer</tspan>
+            </text>
+        </g>
+        <g id="Glean" transform="translate(0.000000, 168.000000)">
+            <rect id="Rectangle" fill="#352657" opacity="0.682514009" x="0" y="0" width="227" height="50"></rect>
+            <text font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="24" font-weight="bold" fill="#FFFFFF">
+                <tspan x="80.404" y="34">Glean</tspan>
+            </text>
+        </g>
+        <g id="GlimpseModel" transform="translate(0.000000, 112.000000)">
+            <rect id="Rectangle" fill="#2657AF" opacity="0.682514009" x="0" y="0" width="464" height="50"></rect>
+            <text font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="24" font-weight="bold" fill="#FFFFFF">
+                <tspan x="149.632" y="34.3846154">GlimpseModel</tspan>
+            </text>
+        </g>
+        <g id="WebKit" transform="translate(881.000000, 112.000000)">
+            <rect id="Rectangle" fill="#929292" opacity="0.682514009" x="0" y="0" width="131" height="105"></rect>
+            <text id="WebKit" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="24" font-weight="bold" fill="#FFFFFF">
+                <tspan x="15.172" y="58">WebKit</tspan>
+            </text>
+        </g>
+        <g id="Glance" transform="translate(470.000000, 112.000000)">
+            <rect id="Rectangle" fill="#AF0327" opacity="0.682514009" x="0" y="0" width="200" height="50"></rect>
+            <text font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="24" font-weight="bold" fill="#FFFFFF">
+                <tspan x="60.016" y="34">Glance</tspan>
+            </text>
+        </g>
+        <g id="GlueUI" transform="translate(676.000000, 112.000000)">
+            <rect id="Rectangle" fill="#44B53C" opacity="0.682514009" x="0" y="0" width="199" height="50"></rect>
+            <text font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="24" font-weight="bold" fill="#FFFFFF">
+                <tspan x="60.86" y="34">GlueUI</tspan>
+            </text>
+        </g>
+        <g id="GlimpseUI" transform="translate(414.000000, 0.000000)">
+            <rect id="Rectangle" fill="#2657AF" opacity="0.682514009" x="0" y="0" width="598" height="106"></rect>
+            <text id="GlimpseUI-(macOS/iOS" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="24" font-weight="bold" fill="#FFFFFF">
+                <tspan x="162.848" y="62">GlimpseUI (macOS/iOS)</tspan>
+            </text>
+        </g>
+        <g id="GlimpseServ">
+            <rect id="Rectangle" fill="#2657AF" opacity="0.682514009" x="0" y="0" width="408" height="106"></rect>
+            <text id="GlimpseServ-(Linux)" font-family="HelveticaNeue-BoldItalic, Helvetica Neue" font-size="24" font-style="italic" font-weight="bold" fill="#FFFFFF">
+                <tspan x="90.456" y="62">GlimpseServ (Linux)</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
