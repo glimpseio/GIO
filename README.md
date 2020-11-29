@@ -70,9 +70,10 @@ Data visualization using the [Vega-Lite](https://vega.github.io) grammer. ~38k S
  ### [GUI](https://github.com/glimpseio/GUI)
  The Glimpse application. ~27k SLOC.
  * [GUI/GlimpseModel](https://github.com/glimpseio/GUI/tree/master/GlimpseModel): The data model for a `.glimpse` document, which is stored as a compressed JSON representation of a `Glance.VizSpec`
- * [GUI/GlimpseUI](https://github.com/glimpseio/GUI/tree/master/GlimpseUI): SwiftUI components specific to Glimpse.
+ * [GUI/GlimpseUI](https://github.com/glimpseio/GUI/tree/master/GlimpseUI): The core of the Glimpse UI implemented as SwiftUI components.
  * [GUI/Glimpse](https://github.com/glimpseio/GUI/tree/master/Glimpse): The `NSApplication` entry point to Glimpse.app, containing the `NSDocument` implementation of `GlimpseModel` the the `NSWindowController` that manages the application lifecycle and hosts the `GlimpseUI` components.
  * [GUI/GlimpseApp](https://github.com/glimpseio/GUI/tree/master/GlimpseApp): Prototype of iOS version of Glimpse.
+ * [GUI/GlimpseServ](https://github.com/glimpseio/GUI/tree/master/GlimpseServ): Prototype of Linux Glimpse collaboration server.
 
 ## Conceptual Overview
 
