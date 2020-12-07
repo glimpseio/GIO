@@ -8,6 +8,7 @@
 
 ## To Do:
 
+ - Expression editor (migrate PropertyBindings)
  - Unified domain/range scale editor
  - "Next Channel" order should be the same as visually displayed channels
  - Expression editor for all fields that can accept expressions
