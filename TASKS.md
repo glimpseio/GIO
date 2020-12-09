@@ -19,3 +19,5 @@
 
  - Fix default color steelblue
  - Restore inspector row label to ColorOrGradientView
+
+
