@@ -10,6 +10,11 @@
 
 ## To Do:
 
+ - Color Scheme CRUD UI
+ - Font CRUD UI
+ - Shape CRUD UI
+ - Theme CRUD UI
+ - PlugIn CRUD UI
  - Expression editor (migrate PropertyBindings)
  - Unified domain/range scale editor
  - "Next Channel" order should be the same as visually displayed channels
