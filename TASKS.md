@@ -2,9 +2,11 @@
 
 ## Doing:
 
- - *XXX* Remove empty channel help tip 
+ - Remove empty channel help tip 
  - Add tooltip to Field/Datum/Value segments
- - Save screenshots to documentation folder
+ - Save screenshots GlimpseUI documentation folder?
+ - Restore color palette picker accessory
+ - Make visual mark size cluster accessory
 
 ## To Do:
 
@@ -19,5 +21,6 @@
 
  - Fix default color steelblue
  - Restore inspector row label to ColorOrGradientView
+ - Check for updates error message
 
 
