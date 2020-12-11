@@ -22,5 +22,6 @@
  - Fix default color steelblue
  - Restore inspector row label to ColorOrGradientView
  - Check for updates error message
+ - Add visual inspector cluster tests
 
 
