@@ -2,6 +2,7 @@
 
 ## Doing:
 
+ - Filter transform editor
  - Remove empty channel help tip 
  - Add tooltip to Field/Datum/Value segments
  - Save screenshots GlimpseUI documentation folder?
@@ -22,6 +23,8 @@
  - Line Dash Value inspector & scales
  - Limit Visual / Encoding "Select Channel" menu to available channels
  - Outline panel re-work: sub-transform, repeat, selection, projection, etc.
+ - Projections
+ - Selections
 
 ## Done:
 
