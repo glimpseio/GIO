@@ -21,6 +21,7 @@
  - Expression editor for all fields that can accept expressions
  - Line Dash Value inspector & scales
  - Limit Visual / Encoding "Select Channel" menu to available channels
+ - Outline panel re-work: sub-transform, repeat, selection, projection, etc.
 
 ## Done:
 
