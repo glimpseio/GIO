@@ -2,17 +2,17 @@
 
 ## Doing:
 
- - Filter transform editor
+ - Fix narrow channel color wells
  - Remove empty channel help tip 
  - Add tooltip to Field/Datum/Value segments
  - Save screenshots GlimpseUI documentation folder?
- - Restore color palette picker accessory
  - Make visual mark size cluster accessory
  - Convert externalizeSpec to JS
  - Create stand-alone JS .glimpse renderer
 
 ## To Do:
 
+ - Color Scheme swatch picker accessory
  - Color Scheme CRUD UI
  - Font CRUD UI
  - Shape CRUD UI
@@ -34,5 +34,7 @@
  - Restore inspector row label to ColorOrGradientView
  - Check for updates error message
  - Add visual inspector cluster tests
+ - Initial SwiftCheck support in GlipseUITests
+ - Filter transform editor
 
 
