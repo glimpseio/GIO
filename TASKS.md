@@ -8,6 +8,8 @@
  - Save screenshots GlimpseUI documentation folder?
  - Restore color palette picker accessory
  - Make visual mark size cluster accessory
+ - Convert externalizeSpec to JS
+ - Create stand-alone JS .glimpse renderer
 
 ## To Do:
 
