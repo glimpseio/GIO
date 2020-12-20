@@ -3,6 +3,9 @@
 ## Doing:
 
  - Color Scheme swatch picker accessory
+ - Size accessory: circular slider
+ - Position accessory: xoff/yoff circular sliders
+ - Contents accessory: shape picker
  - Add gradient to color palette picker
  - Port externalizeSpec to glimpse.ts
  - Remove empty channel help tip 
