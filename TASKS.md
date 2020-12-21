@@ -16,6 +16,8 @@
 
 ## To Do:
 
+ - Make stroke color use gradient picker
+ - Fix sidebar in chooser panel not jumping to indicated section
  - Color Scheme CRUD UI
  - Font CRUD UI
  - Shape CRUD UI
