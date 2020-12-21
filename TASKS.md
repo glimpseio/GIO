@@ -2,12 +2,10 @@
 
 ## Doing:
 
- - Color Scheme swatch picker accessory
+ - Port externalizeSpec to glimpse.ts
  - Size accessory: circular slider
  - Position accessory: xoff/yoff circular sliders
  - Contents accessory: shape picker
- - Add gradient to color palette picker
- - Port externalizeSpec to glimpse.ts
  - Remove empty channel help tip 
  - Add tooltip to Field/Datum/Value segments
  - Save screenshots GlimpseUI documentation folder?
@@ -42,5 +40,7 @@
  - Initial SwiftCheck support in GlipseUITests
  - Filter transform editor
  - Fix narrow channel color wells
+ - Color Scheme swatch picker accessory
+ - Add gradient to color palette picker
 
 
