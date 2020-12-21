@@ -2,6 +2,7 @@
 
 ## Doing:
 
+ - Fix scale domain editor color wells
  - Port externalizeSpec to glimpse.ts
  - Size accessory: circular slider
  - Position accessory: xoff/yoff circular sliders
@@ -14,7 +15,6 @@
 
 ## To Do:
 
- - *Data Source Menu Layer*
  - Make stroke color use gradient picker
  - Fix sidebar in chooser panel not jumping to indicated section
  - Color Scheme CRUD UI
@@ -43,5 +43,6 @@
  - Fix narrow channel color wells
  - Color Scheme swatch picker accessory
  - Add gradient to color palette picker
+ - Data Source Menu Layer
 
 
