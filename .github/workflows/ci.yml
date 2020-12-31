@@ -1,5 +1,5 @@
 name: Glimpse Continuous Integration
-
+  
 on:
   push:
     branches: [ master ]
