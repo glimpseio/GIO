@@ -14,7 +14,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          submodules: recursive
+          submodules: true
+          token: ${{ secrets.ACCESS_TOKEN }}
       - name: Test
         run: |
           xcodebuild test -scheme "Glimpse"
