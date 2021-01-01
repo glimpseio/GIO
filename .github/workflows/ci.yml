@@ -18,4 +18,4 @@ jobs:
           token: ${{ secrets.ACCESS_TOKEN }}
       - name: Test
         run: |
-          xcodebuild -verbose test -scheme "Glimpse"
+          xcodebuild test -scheme "Glimpse" CODE_SIGNING_ALLOWED=NO -verbose
