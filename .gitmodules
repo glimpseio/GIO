@@ -1,36 +1,48 @@
 [submodule "Glean"]
-	path = Glean
-	url = https://github.com/glimpseio/Glean.git
+  path = Glean
+  url = https://github.com/glimpseio/Glean.git
+  master = master
 [submodule "Glue"]
-	path = Glue
-	url = https://github.com/glimpseio/Glue.git
+  path = Glue
+  url = https://github.com/glimpseio/Glue.git
+  master = master
 [submodule "Glib"]
-	path = Glib
-	url = https://github.com/glimpseio/Glib.git
+  path = Glib
+  url = https://github.com/glimpseio/Glib.git
+  master = master
 [submodule "Glance"]
-	path = Glance
-	url = https://github.com/glimpseio/Glance.git
+  path = Glance
+  url = https://github.com/glimpseio/Glance.git
+  master = master
 [submodule "Kanji"]
-	path = Kanji
-	url = https://github.com/glimpseio/Kanji.git
+  path = Kanji
+  url = https://github.com/glimpseio/Kanji.git
+  master = master
 [submodule "GlimpseXML"]
-	path = GlimpseXML
-	url = https://github.com/glimpseio/GlimpseXML.git
+  path = GlimpseXML
+  url = https://github.com/glimpseio/GlimpseXML.git
+  master = master
 [submodule "BricBrac"]
-	path = BricBrac
-	url = https://github.com/glimpseio/BricBrac.git
+  path = BricBrac
+  url = https://github.com/glimpseio/BricBrac.git
+  master = master
 [submodule "ChannelZ"]
-	path = ChannelZ
-	url = https://github.com/glimpseio/ChannelZ.git
+  path = ChannelZ
+  url = https://github.com/glimpseio/ChannelZ.git
+  master = master
 [submodule "WorkFormat"]
-	path = WorkFormat
-	url = https://github.com/glimpseio/WorkFormat.git
+  path = WorkFormat
+  url = https://github.com/glimpseio/WorkFormat.git
+  master = master
 [submodule "GUI"]
-	path = GUI
-    url = https://github.com/glimpseio/GUI.git
+  path = GUI
+  url = https://github.com/glimpseio/GUI.git
+  master = master
 [submodule "Glimpse"]
-    path = Glimpse
-    url = https://github.com/glimpseio/Glimpse.git
+  path = Glimpse
+  url = https://github.com/glimpseio/Glimpse.git
+  master = master
 [submodule "glimpseviz"]
-	path = glimpseviz
-	url = https://github.com/glimpseio/glimpseviz.git
+  path = glimpseviz
+  url = https://github.com/glimpseio/glimpseviz.git
+  master = master
