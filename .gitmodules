@@ -1,9 +1,3 @@
-[submodule "InterScript"]
-	path = InterScript
-	url = https://github.com/glimpseio/InterScript.git
-[submodule "GApp"]
-	path = GApp
-	url = https://github.com/glimpseio/GApp.git
 [submodule "Glean"]
 	path = Glean
 	url = https://github.com/glimpseio/Glean.git
@@ -37,36 +31,6 @@
 [submodule "Glimpse"]
     path = Glimpse
     url = https://github.com/glimpseio/Glimpse.git
-
-[BricBrac "BricBrac"]
-	master = master
-[ChannelZ]
-	ChannelZ = master
-[ChannelZ "ChannelZ"]
-	master = master
-[Enfont "Enfont"]
-	master = master
-[Glance "Glance"]
-	master = master
-[Glean "Glean"]
-	master = master
-[Glib "Glib"]
-	master = master
-[Glib "Glib"]
-	master = master
-[GlimpseXML "GlimpseXML"]
-	master = master
-[Glue "Glue"]
-	master = master
-[InterScript "InterScript"]
-	master = master
-[Kanji "Kanji"]
-	master = master
-[SQLite "SQLite"]
-	master = master
-[WorkFormat "WorkFormat"]
-	master = master
-[submodule "GUI"]
-	master = master
-[submodule "Glimpse"]
-	master = master
+[submodule "glimpseviz"]
+	path = glimpseviz
+	url = https://github.com/glimpseio/glimpseviz.git
