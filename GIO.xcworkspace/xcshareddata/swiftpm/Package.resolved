@@ -32,9 +32,9 @@
         "package": "MemoZ",
         "repositoryURL": "https://github.com/marcprux/MemoZ",
         "state": {
-          "branch": "master",
-          "revision": "6237802bd27385e433556f15f0f7f33c6f121242",
-          "version": null
+          "branch": null,
+          "revision": "7584aeae6a2b3eef5292da6e5543d2f681adf3ab",
+          "version": "1.2.0"
         }
       },
       {
