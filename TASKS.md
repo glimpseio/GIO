@@ -2,6 +2,9 @@
 
 ## Doing:
 
+
+ - Save as Theme / Template Theme Menu
+
  - Fix scale domain editor color wells
  - Port externalizeSpec to glimpse.ts
  - Size accessory: circular slider
@@ -44,5 +47,6 @@
  - Color Scheme swatch picker accessory
  - Add gradient to color palette picker
  - Data Source Menu Layer
+ - Filter failing templates
 
 
