@@ -2,11 +2,11 @@
 
 ## Doing:
 
-
  - Save as Theme / Template Theme Menu
+ - Font Menu update Font Resource Catalog
 
- - Fix scale domain editor color wells
  - Port externalizeSpec to glimpse.ts
+ - Fix scale domain editor color wells
  - Size accessory: circular slider
  - Position accessory: xoff/yoff circular sliders
  - Contents accessory: shape picker
@@ -19,7 +19,6 @@
 ## To Do:
 
  - Make stroke color use gradient picker
- - Fix sidebar in chooser panel not jumping to indicated section
  - Color Scheme CRUD UI
  - Font CRUD UI
  - Shape CRUD UI
@@ -48,5 +47,6 @@
  - Add gradient to color palette picker
  - Data Source Menu Layer
  - Filter failing templates
+ - Fix sidebar in chooser panel not jumping to indicated section
 
 
