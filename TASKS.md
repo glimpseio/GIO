@@ -50,3 +50,12 @@
  - Fix sidebar in chooser panel not jumping to indicated section
 
 
+### ResourceManagers:
+
+ * Themes
+ * Samples
+ * Fonts
+ * SVG Paths
+ * Color Palettes
+ * Images
+ * Plug-Ins
