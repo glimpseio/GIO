@@ -26,10 +26,6 @@
   path = BricBrac
   url = https://github.com/glimpseio/BricBrac.git
   master = master
-[submodule "WorkFormat"]
-  path = WorkFormat
-  url = https://github.com/glimpseio/WorkFormat.git
-  master = master
 [submodule "GUI"]
   path = GUI
   url = https://github.com/glimpseio/GUI.git
