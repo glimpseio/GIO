@@ -26,10 +26,6 @@
   path = BricBrac
   url = https://github.com/glimpseio/BricBrac.git
   master = master
-[submodule "ChannelZ"]
-  path = ChannelZ
-  url = https://github.com/glimpseio/ChannelZ.git
-  master = master
 [submodule "WorkFormat"]
   path = WorkFormat
   url = https://github.com/glimpseio/WorkFormat.git
@@ -41,6 +37,10 @@
 [submodule "Glimpse"]
   path = Glimpse
   url = https://github.com/glimpseio/Glimpse.git
+  master = master
+[submodule "ChannelZ"]
+  path = ChannelZ
+  url = https://github.com/glimpseio/ChannelZ.git
   master = master
 [submodule "glimpseviz"]
   path = glimpseviz
