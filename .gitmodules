@@ -34,10 +34,10 @@
   path = Glimpse
   url = https://github.com/glimpseio/Glimpse.git
   master = master
-[submodule "ChannelZ"]
-  path = ChannelZ
-  url = https://github.com/glimpseio/ChannelZ.git
-  master = master
+#[submodule "ChannelZ"]
+#  path = ChannelZ
+#  url = https://github.com/glimpseio/ChannelZ.git
+#  master = master
 [submodule "glimpseviz"]
   path = glimpseviz
   url = https://github.com/glimpseio/glimpseviz.git
