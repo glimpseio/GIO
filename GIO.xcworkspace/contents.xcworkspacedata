@@ -19,7 +19,4 @@
    <FileRef
       location = "group:BricBrac/BricBrac.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:WorkFormat/WorkFormat.xcodeproj">
-   </FileRef>
 </Workspace>
