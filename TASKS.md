@@ -2,11 +2,7 @@
 
 ## Doing:
 
- - Save as Theme / Template Theme Menu
- - Font Menu update Font Resource Catalog
-
  - Port externalizeSpec to glimpse.ts
- - Fix scale domain editor color wells
  - Size accessory: circular slider
  - Position accessory: xoff/yoff circular sliders
  - Contents accessory: shape picker
@@ -24,10 +20,9 @@
  - Shape CRUD UI
  - Theme CRUD UI
  - PlugIn CRUD UI
- - Expression editor (migrate PropertyBindings)
  - Unified domain/range scale editor
  - "Next Channel" order should be the same as visually displayed channels
- - Expression editor for all fields that can accept expressions
+ - Expression editors (migrate PropertyBindings)
  - Line Dash Value inspector & scales
  - Limit Visual / Encoding "Select Channel" menu to available channels
  - Outline panel re-work: sub-transform, repeat, selection, projection, etc.
@@ -48,6 +43,9 @@
  - Data Source Menu Layer
  - Filter failing templates
  - Fix sidebar in chooser panel not jumping to indicated section
+ - Save as Theme / Template Theme Menu
+ - Font Menu update Font Resource Catalog
+ - Fix scale domain editor color wells
 
 
 ### ResourceManagers:
