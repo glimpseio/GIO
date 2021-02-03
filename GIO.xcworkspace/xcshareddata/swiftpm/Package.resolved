@@ -11,15 +11,6 @@
         }
       },
       {
-        "package": "CoreXLSX",
-        "repositoryURL": "https://github.com/CoreOffice/CoreXLSX",
-        "state": {
-          "branch": null,
-          "revision": "7f5df3c8c8b2b43dc80ddba8b7c4fbd86979e713",
-          "version": "0.14.0"
-        }
-      },
-      {
         "package": "FileCheck",
         "repositoryURL": "https://github.com/llvm-swift/FileCheck.git",
         "state": {
@@ -53,15 +44,6 @@
           "branch": null,
           "revision": "077c096c3ddfc38db223ac8e525ad16ffb987138",
           "version": "0.12.0"
-        }
-      },
-      {
-        "package": "XMLCoder",
-        "repositoryURL": "https://github.com/MaxDesiatov/XMLCoder.git",
-        "state": {
-          "branch": null,
-          "revision": "ac411bd6ab342780be0dfe6f679410f791d751d9",
-          "version": "0.11.1"
         }
       },
       {
