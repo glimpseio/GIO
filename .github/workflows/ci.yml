@@ -1,4 +1,4 @@
-name: Glimpse Continuous Integration
+name: Glimpse CI
   
 on:
   push:
@@ -29,7 +29,7 @@ jobs:
       - name: Test
         run: |
           xcodebuild -scheme "Glimpse" test CODE_SIGNING_ALLOWED=NO 
-          
+
       - name: "Archive"
         uses: devbotsxyz/xcode-archive@v1
         with:
@@ -41,13 +41,7 @@ jobs:
           certificate-data: ${{ secrets.DISTRIBUTION_CERTIFICATE_DATA }}
           certificate-passphrase: ${{ secrets.DISTRIBUTION_CERTIFICATE_PASSPHRASE }}
           keychain-password: ${{ secrets.KEYCHAIN_PASSWORD }}
-
-      # seems to be missing the teamID, so export manually below…
-      #- name: "Export & Sign Release Build"
-      #  uses: devbotsxyz/xcode-export-archive@master
-      #  with:
-      #    scheme: ${{ env.APP_NAME }}
-
+      
       - name: "Create exportOptions.plist"
         run: 
           echo '<plist version="1.0"><dict><key>method</key><string>developer-id</string><key>teamID</key><string>${{ secrets.TEAM_ID }}</string></dict></plist>' > "${{ env.APP_NAME }}ExportOptions.plist"
@@ -72,15 +66,6 @@ jobs:
           appstore-connect-username: ${{ secrets.NOTARIZATION_USERNAME }}
           appstore-connect-password: ${{ secrets.NOTARIZATION_PASSWORD }}
 
-      #- name: "Notarize Release Build"
-      #  uses: devbotsxyz/xcode-notarize@v1
-      #  with:
-      #    verbose: true
-      #    product-path: "Export/${{ env.APP_NAME }}.app"
-      #    appstore-connect-username: ${{ secrets.NOTARIZATION_USERNAME }}
-      #    appstore-connect-password: ${{ secrets.NOTARIZATION_PASSWORD }}
-
-
       - name: "Staple Release Build"
         uses: devbotsxyz/xcode-staple@v1
         with:
@@ -88,13 +73,13 @@ jobs:
           verbose: true
 
       - name: Package for Distribution
-        run: ditto -c -k --keepParent "Export/${{ env.APP_NAME }}.app" "${{ env.APP_NAME }}.zip"
+        run: ditto -c -k --keepParent "Export/${{ env.APP_NAME }}.app" "Export/${{ env.APP_NAME }}.zip"
 
       - name: Upload Build Artifact Zip
         uses: actions/upload-artifact@v2
         with:
           name: Build
-          path: ${{ env.APP_NAME }}.zip
+          path: Export/${{ env.APP_NAME }}.zip
         
       - name: Release
         uses: softprops/action-gh-release@v1
