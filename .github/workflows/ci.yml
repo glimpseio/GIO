@@ -2,14 +2,15 @@ name: Glimpse Continuous Integration
   
 on:
   push:
-    branches: [ master, main ]
-  pull_request:
-    branches: [ master, main ]
+    branches: '*'
+    tags: '*'
+  schedule:
+    # run at 6AM & 6PM UTC
+    - cron:  '0 6,18 * * *'
 
 jobs:
   build:
     name: Glimpse CI
-    # if: false # always skip running to avoid using up minutes
     runs-on: macos-11.0
     steps:
       - name: Checkout
@@ -17,6 +18,12 @@ jobs:
         with:
           submodules: true
           token: ${{ secrets.ACCESS_TOKEN }}
-      - name: Test
+      - name: Build
         run: |
           xcodebuild -scheme "Glimpse" build CODE_SIGNING_ALLOWED=NO 
+      - name: Test
+        run: |
+          xcodebuild -scheme "Glimpse" test CODE_SIGNING_ALLOWED=NO 
+      - name: Archive
+        run: |
+          xcodebuild -scheme "Glimpse" archive CODE_SIGNING_ALLOWED=NO 
