@@ -2,14 +2,14 @@ name: Glimpse Continuous Integration
   
 on:
   push:
-    branches: [ master ]
+    branches: [ master, main ]
   pull_request:
-    branches: [ master ]
+    branches: [ master, main ]
 
 jobs:
   build:
     name: Glimpse CI
-    if: false # always skip running to avoid using up minutes
+    # if: false # always skip running to avoid using up minutes
     runs-on: macos-11.0
     steps:
       - name: Checkout
