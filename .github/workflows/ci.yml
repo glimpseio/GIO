@@ -27,9 +27,16 @@ jobs:
       - name: Build
         run: |
           xcodebuild -scheme "Glimpse" build CODE_SIGNING_ALLOWED=NO 
+          
       - name: Test
         run: |
           xcodebuild -scheme "Glimpse" test CODE_SIGNING_ALLOWED=NO  || echo "TOLERATING TEST FAILURES FOR NOW"
+
+      - name: Upload Test Logs
+        uses: actions/upload-artifact@v2
+        with:
+          name: Logs.zip
+          path: ~/Library/Developer/Xcode/DerivedData/GIO-*/Logs/
 
       - name: "Archive"
         uses: devbotsxyz/xcode-archive@v1
@@ -79,7 +86,7 @@ jobs:
       - name: Upload Build Artifact Zip
         uses: actions/upload-artifact@v2
         with:
-          name: Build
+          name: ${{ env.APP_NAME }}.zip
           path: Export/${{ env.APP_NAME }}.zip
         
       - name: Release
