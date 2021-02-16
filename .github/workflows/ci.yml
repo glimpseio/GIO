@@ -26,6 +26,13 @@ jobs:
           token: ${{ secrets.ACCESS_TOKEN }}
       
 
+
+      - name: "Make Export Folder"
+        run: 
+          mkdir -p Export/
+          
+          
+
       - name: "Import Certificate: Distribution"
         uses: devbotsxyz/import-signing-certificate@main
         with:
@@ -33,13 +40,16 @@ jobs:
           certificate-passphrase: ${{ secrets.DISTRIBUTION_CERTIFICATE_PASSPHRASE }}
           keychain-password: ${{ secrets.KEYCHAIN_PASSWORD }}
       
-
-      - name: "Make Export"
-        run: 
-          mkdir -p Export/
-      - name: "Export Archive"
-        run: 
-          xcodebuild -scheme "Glimpse" archive -archivePath "Export/${{ env.APP_NAME }}.xcarchive" -configuration Release CODE_SIGNING_ALLOWED=NO
+      - name: "Archive"
+        uses: devbotsxyz/xcode-archive@v1
+        with:
+          scheme: ${{ env.APP_NAME }}
+          archive-path: ${{ env.APP_NAME }}.xcarchive
+          configuration: Debug
+      #- name: "Perform Archive (Command Line)"
+      #  run: 
+      #    xcodebuild -scheme "Glimpse" archive -archivePath "Export/${{ env.APP_NAME }}.xcarchive" -configuration Release CODE_SIGNING_ALLOWED=NO
+        
       - name: "Export Plist"
         run: 
           echo '<plist version="1.0"><dict><key>method</key><string>developer-id</string><key>teamID</key><string>${{ secrets.TEAM_ID }}</string></dict></plist>' > "Export/${{ env.APP_NAME }}ExportOptions.plist"
@@ -59,6 +69,7 @@ jobs:
           timeout: 120 # minutes
           product-path: "Export/${{ env.APP_NAME }}.app"
           artifact-path: "Export/${{ env.APP_NAME }}.zip"
+          # archive-path: "Export/${{ env.APP_NAME }}.xcarchive" # TODO
           team-id: ${{ secrets.TEAM_ID }}
           keychain-password: ${{ secrets.KEYCHAIN_PASSWORD }}
           certificate-data: ${{ secrets.DISTRIBUTION_CERTIFICATE_DATA }}
