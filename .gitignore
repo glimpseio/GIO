@@ -5,6 +5,9 @@ build/
 .build/
 DerivedData/
 
+# The output of CI exports
+Export/
+
 ## Various settings
 *.pbxuser
 !default.pbxuser
