@@ -30,7 +30,7 @@ jobs:
           
       - name: Test
         run: |
-          xcodebuild -scheme "Glimpse" test CODE_SIGNING_ALLOWED=NO  || echo "TOLERATING TEST FAILURES FOR NOW"
+          xcodebuild -scheme "Glimpse" test CODE_SIGNING_ALLOWED=NO -skip-testing:VegaLiteTests/testCompleteSamples -skip-testing:VegaLiteTests/testExampleSamples -skip-testing:VegaLiteTests/testDateTemporalFormats -skip-testing:VegaLiteTests/testSimpleSample  || echo "TOLERATING TEST FAILURES FOR NOW"
 
       - name: Upload Test Logs
         uses: actions/upload-artifact@v2
