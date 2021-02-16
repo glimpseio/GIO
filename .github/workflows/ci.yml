@@ -53,12 +53,11 @@ jobs:
           
       - name: "Export Size"
         run: 
-          du -skh Export/*/*
+          du -skh Export/*/*/*
           
       - name: "Export Archive"
         run: 
           xcodebuild -exportArchive -archivePath "Export/${{ env.APP_NAME }}.xcarchive" -exportPath Export/ -exportOptionsPlist "Export/${{ env.APP_NAME }}ExportOptions.plist"
-
       
       # https://developer.apple.com/documentation/xcode/notarizing_macos_software_before_distribution/resolving_common_notarization_issues
       - name: "Notarize Release Build"
