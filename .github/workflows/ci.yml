@@ -57,7 +57,7 @@ jobs:
           
       - name: "Export Archive"
         run: 
-          xcodebuild -exportArchive -archivePath "Export/${{ env.APP_NAME }}.xcarchive" -exportPath Export/ -exportOptionsPlist "Export/${{ env.APP_NAME }}ExportOptions.plist"
+          xcodebuild -exportArchive -archivePath "Export/${{ env.APP_NAME }}.xcarchive" -exportPath Export/ -exportOptionsPlist "Export/${{ env.APP_NAME }}ExportOptions.plist" CODE_SIGNING_REQUIRED="NO" CODE_SIGNING_ALLOWED="NO" EXPANDED_CODE_SIGN_IDENTITY=""
       
       # https://developer.apple.com/documentation/xcode/notarizing_macos_software_before_distribution/resolving_common_notarization_issues
       - name: "Notarize Release Build"
