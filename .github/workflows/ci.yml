@@ -24,25 +24,7 @@ jobs:
         with:
           submodules: true
           token: ${{ secrets.ACCESS_TOKEN }}
-      - name: Build
-        run: |
-          xcodebuild -scheme "Glimpse" build CODE_SIGNING_ALLOWED=NO 
-          
-      - name: Test
-        run: |
-          xcodebuild -scheme "Glimpse" test CODE_SIGNING_ALLOWED=NO -skip-testing:GlimpseTests/GlimpseTests/testLoadSampleGlimpses -skip-testing:VegaLiteTests/testCompleteSamples -skip-testing:VegaLiteTests/testExampleSamples -skip-testing:VegaLiteTests/testDateTemporalFormats -skip-testing:VegaLiteTests/testSimpleSample  || echo "TOLERATING TEST FAILURES FOR NOW"
-
-      - name: Upload Test Logs
-        uses: actions/upload-artifact@v2
-        with:
-          name: Logs.zip
-          path: ~/Library/Developer/Xcode/DerivedData/GIO-*/Logs/
-
-      - name: "Archive"
-        uses: devbotsxyz/xcode-archive@v1
-        with:
-          scheme: ${{ env.APP_NAME }}
-
+      
       - name: "Import Certificate: Distribution"
         uses: devbotsxyz/import-signing-certificate@main
         with:
@@ -50,6 +32,14 @@ jobs:
           certificate-passphrase: ${{ secrets.DISTRIBUTION_CERTIFICATE_PASSPHRASE }}
           keychain-password: ${{ secrets.KEYCHAIN_PASSWORD }}
       
+      - name: Archive
+        run: xcodebuild -scheme "Glimpse" archive -archivePath "${{ env.APP_NAME }}.xcarchive" -configuration Debug SKIP_INSTALL=YES CODE_SIGNING_ALLOWED=NO  
+        
+      #- name: "Archive"
+      #  uses: devbotsxyz/xcode-archive@v1
+      #  with:
+      #    scheme: ${{ env.APP_NAME }}
+
       - name: "Create exportOptions.plist"
         run: 
           echo '<plist version="1.0"><dict><key>method</key><string>developer-id</string><key>teamID</key><string>${{ secrets.TEAM_ID }}</string></dict></plist>' > "${{ env.APP_NAME }}ExportOptions.plist"
@@ -88,7 +78,17 @@ jobs:
         with:
           name: ${{ env.APP_NAME }}.zip
           path: Export/${{ env.APP_NAME }}.zip
-        
+
+      - name: Test
+        run: |
+          xcodebuild -scheme "Glimpse" test CODE_SIGNING_ALLOWED=NO -skip-testing:GlimpseTests/GlimpseTests/testLoadSampleGlimpses -skip-testing:VegaLiteTests/testCompleteSamples -skip-testing:VegaLiteTests/testExampleSamples -skip-testing:VegaLiteTests/testDateTemporalFormats -skip-testing:VegaLiteTests/testSimpleSample  || echo "TOLERATING TEST FAILURES FOR NOW"
+
+      - name: Upload Test Logs
+        uses: actions/upload-artifact@v2
+        with:
+          name: Logs.zip
+          path: ~/Library/Developer/Xcode/DerivedData/GIO-*/Logs/
+
       - name: Release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
