@@ -40,15 +40,16 @@ jobs:
           certificate-passphrase: ${{ secrets.DISTRIBUTION_CERTIFICATE_PASSPHRASE }}
           keychain-password: ${{ secrets.KEYCHAIN_PASSWORD }}
       
-      - name: "Archive"
-        uses: devbotsxyz/xcode-archive@v1
-        with:
-          scheme: ${{ env.APP_NAME }}
-          archive-path: ${{ env.APP_NAME }}.xcarchive
-          configuration: Debug
-      #- name: "Perform Archive (Command Line)"
-      #  run: 
-      #    xcodebuild -scheme "Glimpse" archive -archivePath "Export/${{ env.APP_NAME }}.xcarchive" -configuration Release CODE_SIGNING_ALLOWED=NO
+      #- name: "Archive (Action)"
+      #  uses: devbotsxyz/xcode-archive@v1
+      #  with:
+      #    scheme: ${{ env.APP_NAME }}
+      #    archive-path: ${{ env.APP_NAME }}.xcarchive
+      #    configuration: Release
+    
+      - name: "Perform Archive (Command Line)"
+        run: 
+          xcodebuild -scheme "Glimpse" archive -archivePath "Export/${{ env.APP_NAME }}.xcarchive" -configuration Release CODE_SIGNING_ALLOWED=NO
         
       - name: "Export Plist"
         run: 
