@@ -24,14 +24,6 @@ jobs:
         with:
           submodules: true
           token: ${{ secrets.ACCESS_TOKEN }}
-      
-
-
-      - name: "Make Export Folder"
-        run: 
-          mkdir -p Export/
-          
-          
 
       - name: "Import Certificate: Distribution"
         uses: devbotsxyz/import-signing-certificate@main
@@ -40,14 +32,18 @@ jobs:
           certificate-passphrase: ${{ secrets.DISTRIBUTION_CERTIFICATE_PASSPHRASE }}
           keychain-password: ${{ secrets.KEYCHAIN_PASSWORD }}
       
-      - name: "Archive (Action)"
+      - name: "Make Export Folder"
+        run: 
+          mkdir -p Export/
+          
+      - name: "Perform Archive Action"
         uses: devbotsxyz/xcode-archive@v1
         with:
           scheme: ${{ env.APP_NAME }}
-          archive-path: ${{ env.APP_NAME }}.xcarchive
+          archive-path: Export/${{ env.APP_NAME }}.xcarchive
           configuration: Debug
     
-      #- name: "Perform Archive (Command Line)"
+      #- name: "Perform Archive Command"
       #  run: 
       #    xcodebuild -configuration Debug -scheme "Glimpse" archive -archivePath "Export/${{ env.APP_NAME }}.xcarchive" CODE_SIGNING_ALLOWED=NO
 
