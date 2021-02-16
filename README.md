@@ -1,3 +1,4 @@
+![Glimpse CI](https://github.com/glimpseio/GIO/workflows/Glimpse%20CI/badge.svg)
 
 ## Requirements
 
