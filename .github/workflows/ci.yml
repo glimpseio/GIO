@@ -61,6 +61,13 @@ jobs:
           appstore-connect-username: ${{ secrets.NOTARIZATION_USERNAME }}
           appstore-connect-password: ${{ secrets.NOTARIZATION_PASSWORD }}
 
+      - name: "Check Code Signature"
+        run: 
+          codesign --deep -vvv --verify "Export/${{ env.APP_NAME }}.app"
+          
+      - name: "Check Gatekeeper"
+        run: spctl -a -t exec -vv "Export/${{ env.APP_NAME }}.app"
+
 
       #- name: "Import Certificate: Distribution"
       #  uses: devbotsxyz/import-signing-certificate@main
@@ -118,14 +125,14 @@ jobs:
       #    product-path: "Export/${{env.APP_NAME }}.app"
       #    verbose: true
 
-      #- name: Package for Distribution
-      #  run: ditto -c -k --keepParent "Export/${{ env.APP_NAME }}.app" "Export/${{ env.APP_NAME }}.zip"
+      - name: Package for Distribution
+        run: ditto -c -k --keepParent "Export/${{ env.APP_NAME }}.app" "Export/${{ env.APP_NAME }}.zip"
 
-      #- name: Upload Build Artifact Zip
-      #  uses: actions/upload-artifact@v2
-      #  with:
-      #    name: ${{ env.APP_NAME }}.zip
-      #    path: Export/${{ env.APP_NAME }}.zip
+      - name: Upload Build Artifact Zip
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ env.APP_NAME }}.zip
+          path: Export/${{ env.APP_NAME }}.zip
 
       #- name: Test
       #  run: |
