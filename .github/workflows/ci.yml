@@ -13,7 +13,7 @@ jobs:
     name: Glimpse CI
     runs-on: macos-11.0
     environment: Signing
-    timeout-minutes: 120
+    timeout-minutes: 180
     env:
       APP_NAME: Glimpse
       TEST_NAME: Glimpse
@@ -49,12 +49,11 @@ jobs:
           certificate-passphrase: ${{ secrets.DISTRIBUTION_CERTIFICATE_PASSPHRASE }}
           keychain-password: ${{ secrets.KEYCHAIN_PASSWORD }}
 
-      - name: "Export & Sign Release Build"
+      - name: "Export Archive"
         run: 
           xcodebuild -exportArchive -archivePath "Export/${{ env.APP_NAME }}.xcarchive" -exportPath "Export/" -exportOptionsPlist "Export/${{ env.APP_NAME }}ExportOptions.plist"
 
-      # https://developer.apple.com/documentation/xcode/notarizing_macos_software_before_distribution/resolving_common_notarization_issues
-      - name: "Notarize Release Build"
+      - name: "Notarize App"
         uses: hubomatic/hubomat@v0.0.10
         with:
           verbose: false
@@ -126,11 +125,11 @@ jobs:
       #    appstore-connect-username: ${{ secrets.NOTARIZATION_USERNAME }}
       #    appstore-connect-password: ${{ secrets.NOTARIZATION_PASSWORD }}
 
-      #- name: "Staple Release Build"
-      #  uses: devbotsxyz/xcode-staple@v1
-      #  with:
-      #    product-path: "Export/${{env.APP_NAME }}.app"
-      #    verbose: true
+      - name: "Staple Release Build"
+        uses: devbotsxyz/xcode-staple@v1
+        with:
+          verbose: true
+          product-path: "Export/${{ env.APP_NAME }}.app"
 
       - name: Package for Distribution
         run: ditto -c -k --keepParent "Export/${{ env.APP_NAME }}.app" "Export/${{ env.APP_NAME }}.zip"
