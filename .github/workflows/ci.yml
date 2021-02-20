@@ -28,31 +28,28 @@ jobs:
           submodules: true
           token: ${{ secrets.ACCESS_TOKEN }}
 
-      - name: Set steps.vars.outputs.tag to current release
-        id: vars
-        run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
+      - name: Set steps.taginfo.outputs.tagname to current release
+        id: taginfo
+        run: echo ::set-output name=tagname::${GITHUB_REF#refs/*/}
 
-      - name: Run Tests
-        run: |
-          xcodebuild -scheme "Glimpse" test CODE_SIGNING_ALLOWED=NO \
-            -skip-testing:GlimpseTests/GlimpseTests/testLoadSampleGlimpses \
-            -skip-testing:GlimpseTests/GlimpseTests/testLaunchPerformance \
-            -skip-testing:GlanceTests/VegaLiteTests/testCompleteSamples \
-            -skip-testing:GlanceTests/VegaLiteTests/testExampleSamples \
-            -skip-testing:GlanceTests/VegaTests/testDateTemporalFormats \
-            -skip-testing:GlanceTests/VegaLiteTests/testSimpleSample
+      - name: Set steps.revinfo.outputs.buildnumber to current rev-list count
+        id: revinfo
+        run: echo "::set-output name=buildnumber::$(git rev-list --count ${{ steps.taginfo.outputs.tagname }})"
 
-      - name: "Create exportOptions.plist"
+      - name: "Configure Export"
         run: |
           mkdir -p Export/
           echo '<plist version="1.0"><dict><key>method</key><string>developer-id</string><key>teamID</key><string>${{ secrets.TEAM_ID }}</string></dict></plist>' > "Export/${{ env.APP_NAME }}ExportOptions.plist"
+          echo '<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"><channel><item><enclosure sparkle:version="${{ steps.revinfo.outputs.buildnumber }}" sparkle:shortVersionString="${{ steps.taginfo.outputs.tagname }}" url="https://github.com/${{ env.ORG_NAME }}/${{ env.APP_NAME }}/releases/download/${{ steps.taginfo.outputs.tagname }}/${{ env.APP_NAME }}.zip"></enclosure></item></channel></rss>' > Export/appcast.xml
+          cat Export/appcast.xml
           
       - name: "Archive"
         uses: devbotsxyz/xcode-archive@v1
         with:
           scheme: ${{ env.APP_NAME }}
           archive-path: Export/${{ env.APP_NAME }}
-          configuration: Release
+          configuration: Debug
+          #configuration: Release
 
       - name: "Import Certificate: Distribution"
         uses: devbotsxyz/import-signing-certificate@main
@@ -101,21 +98,26 @@ jobs:
           name: ${{ env.APP_NAME }}.zip
           path: Export/${{ env.APP_NAME }}.zip
 
-      - name: Generate AppCast.xml
-        if: startsWith(github.ref, 'refs/tags/')
-        run: |
-          RELEASE_TAG=`git tag --sort=taggerdate | tail -n 1`
-          echo '<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"><channel><item><enclosure sparkle:version="${{ steps.vars.outputs.tag }}" url="https://github.com/${{ env.ORG_NAME }}/${{ env.APP_NAME }}/releases/download/${{ steps.vars.outputs.tag }}/${{ env.APP_NAME }}.zip"></enclosure></item></channel></rss>' > appcast.xml
-          
       - name: Release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          body_path: RELEASE_NOTES.md
+          #body_path: RELEASE_NOTES.md
           files: |
+            appcast.xml
             CHANGELOG.md
             RELEASE_NOTES.md
             ${{ env.APP_NAME }}.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run Tests
+        run: |
+          xcodebuild -scheme "Glimpse" test CODE_SIGNING_ALLOWED=NO \
+            -skip-testing:GlimpseTests/GlimpseTests/testLoadSampleGlimpses \
+            -skip-testing:GlimpseTests/GlimpseTests/testLaunchPerformance \
+            -skip-testing:GlanceTests/VegaLiteTests/testCompleteSamples \
+            -skip-testing:GlanceTests/VegaLiteTests/testExampleSamples \
+            -skip-testing:GlanceTests/VegaTests/testDateTemporalFormats \
+            -skip-testing:GlanceTests/VegaLiteTests/testSimpleSample
 
