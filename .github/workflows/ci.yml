@@ -39,10 +39,8 @@ jobs:
             -skip-testing:GlanceTests/VegaLiteTests/testCompleteSamples \
             -skip-testing:GlanceTests/VegaLiteTests/testExampleSamples \
             -skip-testing:GlanceTests/VegaTests/testDateTemporalFormats \
-            -skip-testing:VegaLiteTests/VegaLiteTests/testSimpleSample
+            -skip-testing:GlanceTests/VegaLiteTests/testSimpleSample
 
-            # -skip-testing:GlimpseUITests/GlimpseUITests \
-   
       #- name: Upload Test Logs
       #  uses: actions/upload-artifact@v2
       #  with:
