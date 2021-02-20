@@ -13,8 +13,9 @@ jobs:
   build:
     name: Glimpse CI
     runs-on: macos-11.0
+    #runs-on: macos-latest
     environment: Signing
-    timeout-minutes: 180
+    timeout-minutes: 240
     env:
       APP_NAME: Glimpse
       TEST_NAME: Glimpse
@@ -40,13 +41,6 @@ jobs:
             -skip-testing:GlanceTests/VegaLiteTests/testExampleSamples \
             -skip-testing:GlanceTests/VegaTests/testDateTemporalFormats \
             -skip-testing:GlanceTests/VegaLiteTests/testSimpleSample
-
-      #- name: Upload Test Logs
-      #  uses: actions/upload-artifact@v2
-      #  with:
-      #  name: Logs.zip
-      #  path: ~/Library/Developer/Xcode/DerivedData/GIO-*/Logs/
-
 
       - name: "Create exportOptions.plist"
         run: |
