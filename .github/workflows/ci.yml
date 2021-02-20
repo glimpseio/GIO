@@ -104,10 +104,10 @@ jobs:
         with:
           #body_path: RELEASE_NOTES.md
           files: |
-            appcast.xml
             CHANGELOG.md
             RELEASE_NOTES.md
-            ${{ env.APP_NAME }}.zip
+            Export/appcast.xml
+            Export/${{ env.APP_NAME }}.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
