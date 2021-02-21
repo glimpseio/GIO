@@ -21,8 +21,8 @@ jobs:
       REPO_NAME: GIO
       APP_NAME: Glimpse
       TEST_NAME: Glimpse
-      #CONFIGURATION: Release
-      CONFIGURATION: Debug
+      CONFIGURATION: Release
+      #CONFIGURATION: Debug
     
     steps:
       - name: Checkout
@@ -41,7 +41,7 @@ jobs:
         run: echo "::set-output name=buildnumber::$(git rev-list --count ${{ steps.taginfo.outputs.tagname }})"
 
       - name: Run Tests
-        if: false # TODO: disabled for faster CI dev
+        #if: false # this disables tests for speeding up CI
         run: |
           xcodebuild -scheme "Glimpse" test CODE_SIGNING_ALLOWED=NO \
             -skip-testing:GlimpseTests/GlimpseTests \
@@ -57,14 +57,6 @@ jobs:
           echo '<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"><channel><item><enclosure sparkle:version="${{ steps.revinfo.outputs.buildnumber }}" sparkle:shortVersionString="${{ steps.taginfo.outputs.tagname }}" url="https://github.com/${{ env.ORG_NAME }}/${{ env.REPO_NAME }}/releases/download/${{ steps.taginfo.outputs.tagname }}/${{ env.APP_NAME }}.zip"></enclosure></item></channel></rss>' > Export/appcast.xml
           cat Export/appcast.xml
           
-          #- name: "Archive"
-          #uses: devbotsxyz/xcode-archive@v1
-          #with:
-          #scheme: ${{ env.APP_NAME }}
-          #archive-path: Export/${{ env.APP_NAME }}
-          #configuration: Debug
-          #configuration: Release
-
       - name: "Build Archive"
         run:
           xcodebuild archive -configuration "${{ env.CONFIGURATION }}" -scheme "${{ env.APP_NAME }}" -archivePath "Export/${{ env.APP_NAME }}.xcarchive" COMPILER_INDEX_STORE_ENABLE="NO" MARKETING_VERSION="${{ steps.taginfo.outputs.tagname }}" PRODUCT_VERSION="${{ steps.revinfo.outputs.buildnumber }}" CURRENT_PROJECT_VERSION="${{ steps.revinfo.outputs.buildnumber }}"
