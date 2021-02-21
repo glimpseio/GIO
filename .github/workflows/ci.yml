@@ -22,7 +22,7 @@ jobs:
       APP_NAME: Glimpse
       TEST_NAME: Glimpse
       CONFIGURATION: Release
-      #CONFIGURATION: Debug
+      CONFIGURATION: Debug
     
     steps:
       - name: Checkout
