@@ -17,9 +17,11 @@ jobs:
     environment: Signing
     timeout-minutes: 240
     env:
+      ORG_NAME: glimpseio 
+      REPO_NAME: GIO
       APP_NAME: Glimpse
       TEST_NAME: Glimpse
-      ORG_NAME: glimpseio 
+      CONFIGURATION: Release
     
     steps:
       - name: Checkout
@@ -51,7 +53,7 @@ jobs:
         run: |
           mkdir -p Export/
           echo '<plist version="1.0"><dict><key>method</key><string>developer-id</string><key>teamID</key><string>${{ secrets.TEAM_ID }}</string></dict></plist>' > "Export/${{ env.APP_NAME }}ExportOptions.plist"
-          echo '<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"><channel><item><enclosure sparkle:version="${{ steps.revinfo.outputs.buildnumber }}" sparkle:shortVersionString="${{ steps.taginfo.outputs.tagname }}" url="https://github.com/${{ env.ORG_NAME }}/${{ env.APP_NAME }}/releases/download/${{ steps.taginfo.outputs.tagname }}/${{ env.APP_NAME }}.zip"></enclosure></item></channel></rss>' > Export/appcast.xml
+          echo '<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"><channel><item><enclosure sparkle:version="${{ steps.revinfo.outputs.buildnumber }}" sparkle:shortVersionString="${{ steps.taginfo.outputs.tagname }}" url="https://github.com/${{ env.ORG_NAME }}/${{ env.REPO_NAME }}/releases/download/${{ steps.taginfo.outputs.tagname }}/${{ env.APP_NAME }}.zip"></enclosure></item></channel></rss>' > Export/appcast.xml
           cat Export/appcast.xml
           
           #- name: "Archive"
@@ -64,7 +66,7 @@ jobs:
 
       - name: "Build Archive"
         run:
-          xcodebuild archive -scheme "${{ env.APP_NAME }}" -archivePath "Export/${{ env.APP_NAME }}.xcarchive" COMPILER_INDEX_STORE_ENABLE="NO" MARKETING_VERSION="${{ steps.taginfo.outputs.tagname }}" PRODUCT_VERSION="${{ steps.revinfo.outputs.buildnumber }}" CURRENT_PROJECT_VERSION="${{ steps.revinfo.outputs.buildnumber }}"
+          xcodebuild archive -configuration "${{ env.CONFIGURATION }}" -scheme "${{ env.APP_NAME }}" -archivePath "Export/${{ env.APP_NAME }}.xcarchive" COMPILER_INDEX_STORE_ENABLE="NO" MARKETING_VERSION="${{ steps.taginfo.outputs.tagname }}" PRODUCT_VERSION="${{ steps.revinfo.outputs.buildnumber }}" CURRENT_PROJECT_VERSION="${{ steps.revinfo.outputs.buildnumber }}"
 
       - name: "Show Archive Size"
         run:
