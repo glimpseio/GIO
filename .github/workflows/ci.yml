@@ -21,8 +21,8 @@ jobs:
       REPO_NAME: GIO
       APP_NAME: Glimpse
       TEST_NAME: Glimpse
-      #CONFIGURATION: Release
-      CONFIGURATION: Debug
+      CONFIGURATION: Release
+      #CONFIGURATION: Debug
     
     steps:
       - name: Checkout
