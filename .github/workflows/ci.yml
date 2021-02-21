@@ -48,8 +48,8 @@ jobs:
         with:
           scheme: ${{ env.APP_NAME }}
           archive-path: Export/${{ env.APP_NAME }}
-          configuration: Debug
-          #configuration: Release
+          #configuration: Debug
+          configuration: Release
 
       - name: "Import Certificate: Distribution"
         uses: devbotsxyz/import-signing-certificate@main
