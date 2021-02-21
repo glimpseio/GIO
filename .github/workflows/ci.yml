@@ -26,6 +26,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           submodules: true
+          fetch-depth: 0 # https://github.com/actions/checkout/issues/100
           token: ${{ secrets.ACCESS_TOKEN }}
 
       - name: Set steps.taginfo.outputs.tagname to current release
