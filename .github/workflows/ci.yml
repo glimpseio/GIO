@@ -17,11 +17,11 @@ jobs:
     #runs-on: macos-10.15 # currently: macos-latest
 
     runs-on: ${{ matrix.os }}
-      strategy:
-        matrix:
-          os: [macos-10.15]
-          #os: [macos-11.0]
-          #os: [macos-10.15, macos-11.0]
+    strategy:
+      matrix:
+        os: [macos-10.15]
+        #os: [macos-11.0]
+        #os: [macos-10.15, macos-11.0]
 
     environment: Signing
     timeout-minutes: 240
