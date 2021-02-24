@@ -13,12 +13,13 @@ jobs:
   build:
     name: Glimpse CI
 
-    #runs-on: macos-11.0
+    runs-on: macos-11.0
     #runs-on: macos-latest
-    runs-on: ${{ matrix.os }}
-    strategy:
-        matrix:
-            os: [macos-latest, macos-11.0]
+
+    #runs-on: ${{ matrix.os }}
+    #strategy:
+    #matrix:
+    #os: [macos-10.15, macos-11.0]
 
     environment: Signing
     timeout-minutes: 240
@@ -43,16 +44,10 @@ jobs:
           fetch-depth: 0 # https://github.com/actions/checkout/issues/100
           token: ${{ secrets.ACCESS_TOKEN }}
 
-      - name: "Configure Versions"
-        id: config
-        run: |
-          echo "::set-output name=tagname::${GITHUB_REF#refs/*/}"
-          echo "::set-output name=buildnumber::$(git rev-list --count ${GITHUB_REF#refs/*/})"
-
       - name: Run Tests
         # disable tests to speed up CI or enable macos-latest (10.15)
         # if: false 
-        if: matrix.os == 'macos-11.0'
+        # if: matrix.os != 'macos-10.15'
         run: |
           xcodebuild -scheme "Glimpse" test CODE_SIGNING_ALLOWED=NO \
             -skip-testing:GlimpseTests/GlimpseTests \
@@ -61,6 +56,12 @@ jobs:
             -skip-testing:GlanceTests/VegaTests/testDateTemporalFormats \
             -skip-testing:GlanceTests/VegaLiteTests/testSimpleSample
 
+      - name: "Configure Versions"
+        id: config
+        run: |
+          echo "::set-output name=tagname::${GITHUB_REF#refs/*/}"
+          echo "::set-output name=buildnumber::$(git rev-list --count ${GITHUB_REF#refs/*/})"
+
       - name: "Setup Export"
         run: |
           mkdir -p Export/
@@ -68,12 +69,17 @@ jobs:
           cat Export/appcast.xml
           
       - name: "Build Archive"
-        if: matrix.os == 'macos-latest'
-        run:
-          xcodebuild archive -configuration "${{ env.CONFIGURATION }}" -scheme "${{ env.APP_NAME }}" -archivePath "Export/${{ env.APP_NAME }}.xcarchive" COMPILER_INDEX_STORE_ENABLE="NO" MARKETING_VERSION="${{ steps.config.outputs.tagname }}" CURRENT_PROJECT_VERSION="${{ steps.config.outputs.buildnumber }}"
+        # if: matrix.os == 'macos-10.15'
+        run: |
+          xcodebuild archive \
+            -configuration "${{ env.CONFIGURATION }}" \
+            -scheme "${{ env.APP_NAME }}" \
+            -archivePath "Export/${{ env.APP_NAME }}.xcarchive" \
+            MARKETING_VERSION="${{ steps.config.outputs.tagname }}" \
+            CURRENT_PROJECT_VERSION="${{ steps.config.outputs.buildnumber }}"
 
       - name: "Notarize"
-        if: matrix.os == 'macos-latest'
+        # if: matrix.os == 'macos-10.15'
         uses: hubomatic/hubomat@0.1.0
         with:
           scheme: "Glimpse"
@@ -93,13 +99,16 @@ jobs:
           appstore-connect-password: ${{ secrets.NOTARIZATION_PASSWORD }}
 
       - name: "Check Code Signature"
+        # if: matrix.os == 'macos-10.15'
         run: 
           codesign --deep -vvv --verify "Export/${{ env.APP_NAME }}.app"
           
       - name: "Check Gatekeeper"
+        # if: matrix.os == 'macos-10.15'
         run: spctl -a -t exec -vv "Export/${{ env.APP_NAME }}.app"
 
       - name: Upload Build Artifact Zip
+        # if: matrix.os == 'macos-10.15'
         uses: actions/upload-artifact@v2
         with:
           name: ${{ env.APP_NAME }}.zip
