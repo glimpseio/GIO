@@ -42,6 +42,7 @@ jobs:
 
   release-job:
     name: Glimpse Release
+    #if: startsWith(github.ref, 'refs/tags/')
     runs-on: macos-latest
     timeout-minutes: 240
 
@@ -51,8 +52,8 @@ jobs:
       REPO_NAME: GIO
       APP_NAME: Glimpse
       TEST_NAME: Glimpse
-      CONFIGURATION: Release
-      #CONFIGURATION: Debug
+      #CONFIGURATION: Release
+      CONFIGURATION: Debug
     
     steps:
       - name: Cancel Previous Runs
@@ -80,7 +81,6 @@ jobs:
           cat Export/appcast.xml
           
       - name: "Build Archive"
-        if: matrix.os == 'macos-10.15'
         run: |
           xcodebuild archive \
             -configuration "${{ env.CONFIGURATION }}" \
@@ -90,7 +90,6 @@ jobs:
             CURRENT_PROJECT_VERSION="${{ steps.config.outputs.buildnumber }}"
 
       - name: "Notarize"
-        if: matrix.os == 'macos-10.15'
         uses: hubomatic/hubomat@0.1.0
         with:
           scheme: "Glimpse"
@@ -122,6 +121,7 @@ jobs:
 
       - name: Release
         uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
         with:
           #body_path: RELEASE_NOTES.md
           files: |
