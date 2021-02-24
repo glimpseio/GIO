@@ -76,6 +76,8 @@ jobs:
         if: matrix.os == 'macos-latest'
         uses: hubomatic/hubomat@0.1.0
         with:
+          scheme: "Glimpse"
+          configuration: ${{ env.CONFIGURATION }}
           verbose: true
           staple: true
           timeout: 120 # minutes

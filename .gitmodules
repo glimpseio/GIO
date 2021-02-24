@@ -1,44 +1,53 @@
-[submodule "Glean"]
-  path = Glean
-  url = https://github.com/glimpseio/Glean.git
-  master = master
-[submodule "Glue"]
-  path = Glue
-  url = https://github.com/glimpseio/Glue.git
-  master = master
-[submodule "Glib"]
-  path = Glib
-  url = https://github.com/glimpseio/Glib.git
-  master = master
-[submodule "Glance"]
-  path = Glance
-  url = https://github.com/glimpseio/Glance.git
-  master = master
-[submodule "Kanji"]
-  path = Kanji
-  url = https://github.com/glimpseio/Kanji.git
-  master = master
-[submodule "GlimpseXML"]
-  path = GlimpseXML
-  url = https://github.com/glimpseio/GlimpseXML.git
-  master = master
-[submodule "BricBrac"]
-  path = BricBrac
-  url = https://github.com/glimpseio/BricBrac.git
-  master = master
 [submodule "GUI"]
   path = GUI
   url = https://github.com/glimpseio/GUI.git
   master = master
+	branch = master
+[submodule "Glean"]
+  path = Glean
+  url = https://github.com/glimpseio/Glean.git
+  master = master
+	branch = master
+[submodule "Glue"]
+  path = Glue
+  url = https://github.com/glimpseio/Glue.git
+  master = master
+	branch = master
+[submodule "Glib"]
+  path = Glib
+  url = https://github.com/glimpseio/Glib.git
+  master = master
+	branch = master
+[submodule "Glance"]
+  path = Glance
+  url = https://github.com/glimpseio/Glance.git
+  master = master
+	branch = master
+[submodule "BricBrac"]
+  path = BricBrac
+  url = https://github.com/glimpseio/BricBrac.git
+  master = master
+	branch = master
 [submodule "Glimpse"]
   path = Glimpse
   url = https://github.com/glimpseio/Glimpse.git
   master = master
-#[submodule "ChannelZ"]
-#  path = ChannelZ
-#  url = https://github.com/glimpseio/ChannelZ.git
-#  master = master
+	branch = master
 [submodule "glimpseviz"]
   path = glimpseviz
   url = https://github.com/glimpseio/glimpseviz.git
   master = master
+    branch = master
+
+[submodule "Kanji"]
+  path = Kanji
+  url = https://github.com/glimpseio/Kanji.git
+  master = master
+    branch = master
+
+[submodule "GlimpseXML"]
+  path = GlimpseXML
+  url = https://github.com/glimpseio/GlimpseXML.git
+  master = master
+    branch = master
+
