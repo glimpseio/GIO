@@ -5,9 +5,8 @@ on:
     branches: '*'
     tags: '*'
 
-    #schedule:
-    # run at 6AM & 6PM UTC
-    #- cron:  '0 6,18 * * *'
+    schedule: # build at 6AM & 6PM UTC
+      - cron:  '0 6,18 * * *'
 
 jobs:
   build:
@@ -71,7 +70,7 @@ jobs:
           du -skh "Export/${{ env.APP_NAME }}.xcarchive"
 
       # Run immediately before exporting archive or else keychain timeout & hang
-      - name: "Import Certificate: Distribution"
+      - name: "Import Developer ID Certificate"
         uses: devbotsxyz/import-signing-certificate@main
         with:
           certificate-data: ${{ secrets.DISTRIBUTION_CERTIFICATE_DATA }}
