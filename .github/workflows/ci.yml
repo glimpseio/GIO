@@ -10,34 +10,17 @@ on:
       - cron:  '0 6,18 * * *'
 
 jobs:
-  build:
-    name: Glimpse CI
-
-    #runs-on: macos-11.0
-    #runs-on: macos-10.15 # currently: macos-latest
-
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [macos-10.15]
-        #os: [macos-11.0]
-        #os: [macos-10.15, macos-11.0]
-
-    environment: Signing
+  test-job:
+    name: Glimpse Tests
+    runs-on: macos-11.0
     timeout-minutes: 240
-    env:
-      ORG_NAME: glimpseio 
-      REPO_NAME: GIO
-      APP_NAME: Glimpse
-      TEST_NAME: Glimpse
-      #CONFIGURATION: Release
-      CONFIGURATION: Debug
-    
+
     steps:
-      #- name: Cancel Previous Runs
-      #uses: styfle/cancel-workflow-action@0.8.0
-      #with:
-      #access_token: ${{ github.token }}
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.8.0
+        with:
+          access_token: ${{ github.token }}
+
 
       - name: Checkout
         uses: actions/checkout@v2
@@ -49,7 +32,6 @@ jobs:
       - name: Run Tests
         # disable tests to speed up CI or enable macos-latest (10.15)
         # if: false 
-        if: matrix.os != 'macos-10.15'
         run: |
           xcodebuild -scheme "Glimpse" test CODE_SIGNING_ALLOWED=NO \
             -skip-testing:GlimpseTests/GlimpseTests \
@@ -57,6 +39,33 @@ jobs:
             -skip-testing:GlanceTests/VegaLiteTests/testExampleSamples \
             -skip-testing:GlanceTests/VegaTests/testDateTemporalFormats \
             -skip-testing:GlanceTests/VegaLiteTests/testSimpleSample
+
+  release-job:
+    name: Glimpse Release
+    runs-on: macos-latest
+    timeout-minutes: 240
+
+    environment: Signing
+    env:
+      ORG_NAME: glimpseio 
+      REPO_NAME: GIO
+      APP_NAME: Glimpse
+      TEST_NAME: Glimpse
+      CONFIGURATION: Release
+      #CONFIGURATION: Debug
+    
+    steps:
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.8.0
+        with:
+          access_token: ${{ github.token }}
+
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0 # https://github.com/actions/checkout/issues/100
+          token: ${{ secrets.ACCESS_TOKEN }}
 
       - name: "Configure Versions"
         id: config
@@ -71,7 +80,7 @@ jobs:
           cat Export/appcast.xml
           
       - name: "Build Archive"
-        # if: matrix.os == 'macos-10.15'
+        if: matrix.os == 'macos-10.15'
         run: |
           xcodebuild archive \
             -configuration "${{ env.CONFIGURATION }}" \
@@ -81,7 +90,7 @@ jobs:
             CURRENT_PROJECT_VERSION="${{ steps.config.outputs.buildnumber }}"
 
       - name: "Notarize"
-        # if: matrix.os == 'macos-10.15'
+        if: matrix.os == 'macos-10.15'
         uses: hubomatic/hubomat@0.1.0
         with:
           scheme: "Glimpse"
@@ -100,17 +109,12 @@ jobs:
           appstore-connect-username: ${{ secrets.NOTARIZATION_USERNAME }}
           appstore-connect-password: ${{ secrets.NOTARIZATION_PASSWORD }}
 
-      - name: "Check Code Signature"
-        # if: matrix.os == 'macos-10.15'
-        run: 
+      - name: "Verify Signing"
+        run: |
           codesign --deep -vvv --verify "Export/${{ env.APP_NAME }}.app"
-          
-      - name: "Check Gatekeeper"
-        # if: matrix.os == 'macos-10.15'
-        run: spctl -a -t exec -vv "Export/${{ env.APP_NAME }}.app"
+          spctl -a -t exec -vv "Export/${{ env.APP_NAME }}.app"
 
       - name: Upload Build Artifact Zip
-        # if: matrix.os == 'macos-10.15'
         uses: actions/upload-artifact@v2
         with:
           name: ${{ env.APP_NAME }}.zip
@@ -118,7 +122,6 @@ jobs:
 
       - name: Release
         uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
         with:
           #body_path: RELEASE_NOTES.md
           files: |
