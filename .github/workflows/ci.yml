@@ -70,25 +70,28 @@ jobs:
           du -skh "Export/${{ env.APP_NAME }}.xcarchive"
 
       # Run immediately before exporting archive or else keychain timeout & hang
-      - name: "Import Developer ID Certificate"
-        uses: devbotsxyz/import-signing-certificate@main
-        with:
-          certificate-data: ${{ secrets.DISTRIBUTION_CERTIFICATE_DATA }}
-          certificate-passphrase: ${{ secrets.DISTRIBUTION_CERTIFICATE_PASSPHRASE }}
-          keychain-password: ${{ secrets.KEYCHAIN_PASSWORD }}
+      #- name: "Import Developer ID Certificate"
+      #uses: devbotsxyz/import-signing-certificate@main
+      #with:
+      #certificate-data: ${{ secrets.DISTRIBUTION_CERTIFICATE_DATA }}
+      #certificate-passphrase: ${{ secrets.DISTRIBUTION_CERTIFICATE_PASSPHRASE }}
+      #keychain-password: ${{ secrets.KEYCHAIN_PASSWORD }}
+      #
+      #- name: "Export Archive"
+      #run: 
+      #xcodebuild -exportArchive -archivePath "Export/${{ env.APP_NAME }}.xcarchive" -exportPath "Export/" -exportOptionsPlist "Export/${{ env.APP_NAME }}ExportOptions.plist"
 
-      - name: "Export Archive"
-        run: 
-          xcodebuild -exportArchive -archivePath "Export/${{ env.APP_NAME }}.xcarchive" -exportPath "Export/" -exportOptionsPlist "Export/${{ env.APP_NAME }}ExportOptions.plist"
-
-      - name: "Notarize App"
-        uses: hubomatic/hubomat@v0.0.10
+      - name: "Notarize"
+        uses: hubomatic/hubomat@0.1.0
         with:
-          verbose: false
+          verbose: true
+          staple: true
           timeout: 120 # minutes
+          team-id: ${{ secrets.TEAM_ID }}
+          export-path: "Export/"
+          archive-path: "Export/${{ env.APP_NAME }}.xcarchive"
           product-path: "Export/${{ env.APP_NAME }}.app"
           artifact-path: "Export/${{ env.APP_NAME }}.zip"
-          team-id: ${{ secrets.TEAM_ID }}
           keychain-password: ${{ secrets.KEYCHAIN_PASSWORD }}
           certificate-data: ${{ secrets.DISTRIBUTION_CERTIFICATE_DATA }}
           certificate-passphrase: ${{ secrets.DISTRIBUTION_CERTIFICATE_PASSPHRASE }}
@@ -102,14 +105,14 @@ jobs:
       - name: "Check Gatekeeper"
         run: spctl -a -t exec -vv "Export/${{ env.APP_NAME }}.app"
 
-      - name: "Staple Release Build"
-        uses: devbotsxyz/xcode-staple@v1
-        with:
-          verbose: true
-          product-path: "Export/${{ env.APP_NAME }}.app"
+        #- name: "Staple Release Build"
+        #uses: devbotsxyz/xcode-staple@v1
+        #with:
+        #verbose: true
+        #product-path: "Export/${{ env.APP_NAME }}.app"
 
-      - name: Package for Distribution
-        run: ditto -c -k --keepParent "Export/${{ env.APP_NAME }}.app" "Export/${{ env.APP_NAME }}.zip"
+        #- name: Package for Distribution
+          #run: ditto -c -k --keepParent "Export/${{ env.APP_NAME }}.app" "Export/${{ env.APP_NAME }}.zip"
 
       - name: Upload Build Artifact Zip
         uses: actions/upload-artifact@v2
