@@ -12,8 +12,14 @@ on:
 jobs:
   build:
     name: Glimpse CI
+
     #runs-on: macos-11.0
-    runs-on: macos-latest
+    #runs-on: macos-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+        matrix:
+            os: [macos-latest, macos-11.0]
+
     environment: Signing
     timeout-minutes: 240
     env:
@@ -43,10 +49,10 @@ jobs:
           echo "::set-output name=tagname::${GITHUB_REF#refs/*/}"
           echo "::set-output name=buildnumber::$(git rev-list --count ${GITHUB_REF#refs/*/})"
 
-
       - name: Run Tests
         # disable tests to speed up CI or enable macos-latest (10.15)
-        if: false 
+        # if: false 
+        if: matrix.os == 'macos-11.0'
         run: |
           xcodebuild -scheme "Glimpse" test CODE_SIGNING_ALLOWED=NO \
             -skip-testing:GlimpseTests/GlimpseTests \
@@ -62,10 +68,12 @@ jobs:
           cat Export/appcast.xml
           
       - name: "Build Archive"
+        if: matrix.os == 'macos-latest'
         run:
           xcodebuild archive -configuration "${{ env.CONFIGURATION }}" -scheme "${{ env.APP_NAME }}" -archivePath "Export/${{ env.APP_NAME }}.xcarchive" COMPILER_INDEX_STORE_ENABLE="NO" MARKETING_VERSION="${{ steps.config.outputs.tagname }}" CURRENT_PROJECT_VERSION="${{ steps.config.outputs.buildnumber }}"
 
       - name: "Notarize"
+        if: matrix.os == 'macos-latest'
         uses: hubomatic/hubomat@0.1.0
         with:
           verbose: true
