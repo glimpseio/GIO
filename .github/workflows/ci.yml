@@ -5,14 +5,15 @@ on:
     branches: '*'
     tags: '*'
 
-    schedule: # build at 6AM & 6PM UTC
+    # build at 6AM & 6PM UTC
+    schedule: 
       - cron:  '0 6,18 * * *'
 
 jobs:
   build:
     name: Glimpse CI
-    runs-on: macos-11.0
-    #runs-on: macos-latest
+    #runs-on: macos-11.0
+    runs-on: macos-latest
     environment: Signing
     timeout-minutes: 240
     env:
@@ -20,14 +21,14 @@ jobs:
       REPO_NAME: GIO
       APP_NAME: Glimpse
       TEST_NAME: Glimpse
-      CONFIGURATION: Release
-      #CONFIGURATION: Debug
+      #CONFIGURATION: Release
+      CONFIGURATION: Debug
     
     steps:
-      - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.8.0
-        with:
-          access_token: ${{ github.token }}
+      #- name: Cancel Previous Runs
+      #uses: styfle/cancel-workflow-action@0.8.0
+      #with:
+      #access_token: ${{ github.token }}
 
       - name: Checkout
         uses: actions/checkout@v2
@@ -44,7 +45,8 @@ jobs:
 
 
       - name: Run Tests
-        #if: false # this disables tests for speeding up CI
+        # disable tests to speed up CI or enable macos-latest (10.15)
+        if: false 
         run: |
           xcodebuild -scheme "Glimpse" test CODE_SIGNING_ALLOWED=NO \
             -skip-testing:GlimpseTests/GlimpseTests \
