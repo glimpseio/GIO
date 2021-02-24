@@ -5,9 +5,8 @@ on:
     branches: '*'
     tags: '*'
 
-    #schedule:
-    # run at 6AM & 6PM UTC
-    #- cron:  '0 6,18 * * *'
+    schedule: # build at 6AM & 6PM UTC
+      - cron:  '0 6,18 * * *'
 
 jobs:
   build:
@@ -37,13 +36,12 @@ jobs:
           fetch-depth: 0 # https://github.com/actions/checkout/issues/100
           token: ${{ secrets.ACCESS_TOKEN }}
 
-      - name: Set steps.taginfo.outputs.tagname to current release
-        id: taginfo
-        run: echo ::set-output name=tagname::${GITHUB_REF#refs/*/}
+      - name: "Configure Versions"
+        id: config
+        run: |
+          echo "::set-output name=tagname::${GITHUB_REF#refs/*/}"
+          echo "::set-output name=buildnumber::$(git rev-list --count ${GITHUB_REF#refs/*/})"
 
-      - name: Set steps.revinfo.outputs.buildnumber to current rev-list count
-        id: revinfo
-        run: echo "::set-output name=buildnumber::$(git rev-list --count ${{ steps.taginfo.outputs.tagname }})"
 
       - name: Run Tests
         #if: false # this disables tests for speeding up CI
@@ -55,41 +53,27 @@ jobs:
             -skip-testing:GlanceTests/VegaTests/testDateTemporalFormats \
             -skip-testing:GlanceTests/VegaLiteTests/testSimpleSample
 
-      - name: "Configure Export"
+      - name: "Setup Export"
         run: |
           mkdir -p Export/
-          echo '<plist version="1.0"><dict><key>method</key><string>developer-id</string><key>teamID</key><string>${{ secrets.TEAM_ID }}</string></dict></plist>' > "Export/${{ env.APP_NAME }}ExportOptions.plist"
-          echo '<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"><channel><item><enclosure sparkle:version="${{ steps.revinfo.outputs.buildnumber }}" sparkle:shortVersionString="${{ steps.taginfo.outputs.tagname }}" url="https://github.com/${{ env.ORG_NAME }}/${{ env.REPO_NAME }}/releases/download/${{ steps.taginfo.outputs.tagname }}/${{ env.APP_NAME }}.zip"></enclosure></item></channel></rss>' > Export/appcast.xml
+          echo '<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"><channel><item><enclosure sparkle:version="${{ steps.config.outputs.buildnumber }}" sparkle:shortVersionString="${{ steps.config.outputs.tagname }}" url="https://github.com/${{ env.ORG_NAME }}/${{ env.REPO_NAME }}/releases/download/${{ steps.config.outputs.tagname }}/${{ env.APP_NAME }}.zip"></enclosure></item></channel></rss>' > Export/appcast.xml
           cat Export/appcast.xml
           
       - name: "Build Archive"
         run:
-          xcodebuild archive -configuration "${{ env.CONFIGURATION }}" -scheme "${{ env.APP_NAME }}" -archivePath "Export/${{ env.APP_NAME }}.xcarchive" COMPILER_INDEX_STORE_ENABLE="NO" MARKETING_VERSION="${{ steps.taginfo.outputs.tagname }}" PRODUCT_VERSION="${{ steps.revinfo.outputs.buildnumber }}" CURRENT_PROJECT_VERSION="${{ steps.revinfo.outputs.buildnumber }}"
+          xcodebuild archive -configuration "${{ env.CONFIGURATION }}" -scheme "${{ env.APP_NAME }}" -archivePath "Export/${{ env.APP_NAME }}.xcarchive" COMPILER_INDEX_STORE_ENABLE="NO" MARKETING_VERSION="${{ steps.config.outputs.tagname }}" CURRENT_PROJECT_VERSION="${{ steps.config.outputs.buildnumber }}"
 
-      - name: "Show Archive Size"
-        run:
-          du -skh "Export/${{ env.APP_NAME }}.xcarchive"
-
-      # Run immediately before exporting archive or else keychain timeout & hang
-      - name: "Import Developer ID Certificate"
-        uses: devbotsxyz/import-signing-certificate@main
+      - name: "Notarize"
+        uses: hubomatic/hubomat@0.1.0
         with:
-          certificate-data: ${{ secrets.DISTRIBUTION_CERTIFICATE_DATA }}
-          certificate-passphrase: ${{ secrets.DISTRIBUTION_CERTIFICATE_PASSPHRASE }}
-          keychain-password: ${{ secrets.KEYCHAIN_PASSWORD }}
-
-      - name: "Export Archive"
-        run: 
-          xcodebuild -exportArchive -archivePath "Export/${{ env.APP_NAME }}.xcarchive" -exportPath "Export/" -exportOptionsPlist "Export/${{ env.APP_NAME }}ExportOptions.plist"
-
-      - name: "Notarize App"
-        uses: hubomatic/hubomat@v0.0.10
-        with:
-          verbose: false
+          verbose: true
+          staple: true
           timeout: 120 # minutes
+          team-id: ${{ secrets.TEAM_ID }}
+          export-path: "Export/"
+          archive-path: "Export/${{ env.APP_NAME }}.xcarchive"
           product-path: "Export/${{ env.APP_NAME }}.app"
           artifact-path: "Export/${{ env.APP_NAME }}.zip"
-          team-id: ${{ secrets.TEAM_ID }}
           keychain-password: ${{ secrets.KEYCHAIN_PASSWORD }}
           certificate-data: ${{ secrets.DISTRIBUTION_CERTIFICATE_DATA }}
           certificate-passphrase: ${{ secrets.DISTRIBUTION_CERTIFICATE_PASSPHRASE }}
@@ -102,15 +86,6 @@ jobs:
           
       - name: "Check Gatekeeper"
         run: spctl -a -t exec -vv "Export/${{ env.APP_NAME }}.app"
-
-      - name: "Staple Release Build"
-        uses: devbotsxyz/xcode-staple@v1
-        with:
-          verbose: true
-          product-path: "Export/${{ env.APP_NAME }}.app"
-
-      - name: Package for Distribution
-        run: ditto -c -k --keepParent "Export/${{ env.APP_NAME }}.app" "Export/${{ env.APP_NAME }}.zip"
 
       - name: Upload Build Artifact Zip
         uses: actions/upload-artifact@v2
