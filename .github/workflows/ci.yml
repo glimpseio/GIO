@@ -34,7 +34,7 @@ jobs:
         # if: false 
         run: |
           xcodebuild test \
-            -scheme "${{ env.APP_NAME }}" \
+            -scheme "Glimpse" \
             CODE_SIGNING_ALLOWED=NO \
             -skip-testing:GlimpseTests/GlimpseTests
             #-skip-testing:GlanceTests/VegaLiteTests/testCompleteSamples \
