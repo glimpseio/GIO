@@ -33,12 +33,14 @@ jobs:
         # disable tests to speed up CI or enable macos-latest (10.15)
         # if: false 
         run: |
-          xcodebuild -scheme "Glimpse" test CODE_SIGNING_ALLOWED=NO \
-            -skip-testing:GlimpseTests/GlimpseTests \
-            -skip-testing:GlanceTests/VegaLiteTests/testCompleteSamples \
-            -skip-testing:GlanceTests/VegaLiteTests/testExampleSamples \
-            -skip-testing:GlanceTests/VegaTests/testDateTemporalFormats \
-            -skip-testing:GlanceTests/VegaLiteTests/testSimpleSample
+          xcodebuild test \
+            -scheme "${{ env.APP_NAME }}" \
+            CODE_SIGNING_ALLOWED=NO \
+            -skip-testing:GlimpseTests/GlimpseTests
+            #-skip-testing:GlanceTests/VegaLiteTests/testCompleteSamples \
+            #-skip-testing:GlanceTests/VegaLiteTests/testExampleSamples \
+            #-skip-testing:GlanceTests/VegaTests/testDateTemporalFormats \
+            #-skip-testing:GlanceTests/VegaLiteTests/testSimpleSample
 
   release-job:
     name: Glimpse Release
@@ -79,13 +81,14 @@ jobs:
           mkdir -p Export/
           echo '<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"><channel><item><enclosure sparkle:version="${{ steps.config.outputs.buildnumber }}" sparkle:shortVersionString="${{ steps.config.outputs.tagname }}" url="https://github.com/${{ env.ORG_NAME }}/${{ env.REPO_NAME }}/releases/download/${{ steps.config.outputs.tagname }}/${{ env.APP_NAME }}.zip"></enclosure></item></channel></rss>' > Export/appcast.xml
           cat Export/appcast.xml
-          
+
       - name: "Build Archive"
         run: |
           xcodebuild archive \
             -configuration "${{ env.CONFIGURATION }}" \
             -scheme "${{ env.APP_NAME }}" \
             -archivePath "Export/${{ env.APP_NAME }}.xcarchive" \
+            CODE_SIGNING_ALLOWED=NO \
             MARKETING_VERSION="${{ steps.config.outputs.tagname }}" \
             CURRENT_PROJECT_VERSION="${{ steps.config.outputs.buildnumber }}"
 
