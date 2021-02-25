@@ -90,12 +90,11 @@ jobs:
             CURRENT_PROJECT_VERSION="${{ steps.config.outputs.buildnumber }}"
 
       - name: "Notarize"
-        uses: hubomatic/hubomat@0.1.5
+        uses: hubomatic/hubomat@0.1.7
         with:
-          scheme: "Glimpse"
           verbose: true
-          staple: true
-          timeout: 120 # minutes
+          timeout: 180 # minutes
+          scheme: "${{ env.APP_NAME }}"
 
           export-path: "Export/"
           archive-path: "Export/${{ env.APP_NAME }}.xcarchive"
