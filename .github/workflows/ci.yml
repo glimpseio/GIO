@@ -37,9 +37,8 @@ jobs:
             -scheme "Glimpse" \
             CODE_SIGNING_ALLOWED=NO \
             -skip-testing:GlimpseTests/GlimpseTests \
-            -skip-testing:GlanceTests/VegaLiteTests/testCompleteSamples \
-            -skip-testing:GlanceTests/VegaLiteTests/testExampleSamples \
-            -skip-testing:GlanceTests/VegaLiteTests/testSimpleSample
+            -skip-testing:GlanceTests/VegaLiteTests/testCompleteSamples
+            #-skip-testing:GlanceTests/VegaLiteTests/testExampleSamples
 
   release-job:
     name: Glimpse Release
