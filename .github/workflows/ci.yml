@@ -34,8 +34,8 @@ jobs:
         # if: false 
         run: |
           xcodebuild test \
-            -scheme "Glimpse" \
-            -skip-testing:GlimpseTests/GlimpseTests
+            -scheme "Glimpse"
+             #-skip-testing:GlimpseTests/GlimpseTests
 
   release-job:
     name: Glimpse Release
