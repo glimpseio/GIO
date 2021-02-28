@@ -30,12 +30,15 @@ jobs:
           token: ${{ secrets.ACCESS_TOKEN }}
 
       - name: Run Tests
-        # disable tests to speed up CI or enable macos-latest (10.15)
-        # if: false 
         run: |
           xcodebuild test \
-            -scheme "Glimpse"
-             #-skip-testing:GlimpseTests/GlimpseTests
+            -scheme "Glimpse" \
+            | xcpretty --report html --screenshots
+
+      - name: Upload Test Output
+        uses: actions/upload-artifact@v2
+        with:
+          path: build/reports/
 
   release-job:
     name: Glimpse Release
