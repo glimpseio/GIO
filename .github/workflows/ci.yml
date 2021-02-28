@@ -33,12 +33,12 @@ jobs:
         run: |
           xcodebuild test \
             -scheme "Glimpse" \
-            | xcpretty --report html --screenshots
+            | xcpretty --report html --screenshots && exit ${PIPESTATUS[0]}
 
       - name: Upload Test Output
         uses: actions/upload-artifact@v2
         with:
-          path: build/reports/
+          path: build/reports/tests.html
 
   release-job:
     name: Glimpse Release
