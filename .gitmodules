@@ -38,16 +38,3 @@
   url = https://github.com/glimpseio/glimpseviz.git
   master = master
     branch = master
-
-[submodule "Kanji"]
-  path = Kanji
-  url = https://github.com/glimpseio/Kanji.git
-  master = master
-    branch = master
-
-[submodule "GlimpseXML"]
-  path = GlimpseXML
-  url = https://github.com/glimpseio/GlimpseXML.git
-  master = master
-    branch = master
-
