@@ -2,6 +2,7 @@
 
 ## Doing:
 
+ - Inspector: tab ordering, alignment, speed
  - Create stand-alone JS .glimpse renderer
  - Port externalizeSpec to glimpse.ts
  - Size accessory: circular slider
