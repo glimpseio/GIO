@@ -2,6 +2,7 @@
 
 ## Doing:
 
+ - Create stand-alone JS .glimpse renderer
  - Port externalizeSpec to glimpse.ts
  - Size accessory: circular slider
  - Position accessory: xoff/yoff circular sliders
@@ -10,7 +11,6 @@
  - Add tooltip to Field/Datum/Value segments
  - Save screenshots GlimpseUI documentation folder?
  - Make visual mark size cluster accessory
- - Create stand-alone JS .glimpse renderer
 
 ## To Do:
 
