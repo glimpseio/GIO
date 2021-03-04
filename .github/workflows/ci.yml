@@ -77,6 +77,14 @@ jobs:
           fetch-depth: 0 # https://github.com/actions/checkout/issues/100
           token: ${{ secrets.ACCESS_TOKEN }}
 
+      # not required, but helps speed up rebuilding unchanged projects
+      - name: Cache Derived data
+        uses: actions/cache@v2
+        with:
+          path: ~/Library/Developer/Xcode/DerivedData
+          key: ddata-${{ hashFiles('**/*.pbxproj') }}
+          restore-keys: ddata-
+
       - name: "Configure Versions"
         id: config
         run: |
