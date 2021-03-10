@@ -7,7 +7,8 @@ on:
 
   # build throughout the day
   schedule: 
-    - cron:  '0 3,6,9,12,15,18,21,24 * * *'
+    - cron: '0 0,3,6,9,12,15,18,21 * * *'
+
 
 jobs:
   test-job:
