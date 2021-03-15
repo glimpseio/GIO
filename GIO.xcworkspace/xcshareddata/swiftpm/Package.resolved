@@ -42,7 +42,7 @@
         "repositoryURL": "https://github.com/glimpseio/MiscKit",
         "state": {
           "branch": "main",
-          "revision": "db9db351319b7b606f558c9286665a8c13d17002",
+          "revision": "fd1a93d8c3edf09a3cd6962907f23fa9468ff69a",
           "version": null
         }
       },
@@ -60,8 +60,8 @@
         "repositoryURL": "https://github.com/apple/swift-argument-parser",
         "state": {
           "branch": null,
-          "revision": "9564d61b08a5335ae0a36f789a7d71493eacadfc",
-          "version": "0.3.2"
+          "revision": "831ed5e860a70e745bc1337830af4786b2576881",
+          "version": "0.4.1"
         }
       },
       {
