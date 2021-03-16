@@ -1,40 +1,40 @@
 [submodule "GUI"]
   path = GUI
-  url = https://github.com/glimpseio/GUI.git
+  url = git@github.com:glimpseio/GUI.git
   master = master
 	branch = master
 [submodule "Glean"]
   path = Glean
-  url = https://github.com/glimpseio/Glean.git
+  url = git@github.com:glimpseio/Glean.git
   master = master
 	branch = master
 [submodule "Glue"]
   path = Glue
-  url = https://github.com/glimpseio/Glue.git
+  url = git@github.com:glimpseio/Glue.git
   master = master
 	branch = master
 [submodule "Glib"]
   path = Glib
-  url = https://github.com/glimpseio/Glib.git
+  url = git@github.com:glimpseio/Glib.git
   master = master
 	branch = master
 [submodule "Glance"]
   path = Glance
-  url = https://github.com/glimpseio/Glance.git
+  url = git@github.com:glimpseio/Glance.git
   master = master
 	branch = master
 [submodule "BricBrac"]
   path = BricBrac
-  url = https://github.com/glimpseio/BricBrac.git
+  url = git@github.com:glimpseio/BricBrac.git
   master = master
 	branch = master
 [submodule "Glimpse"]
   path = Glimpse
-  url = https://github.com/glimpseio/Glimpse.git
+  url = git@github.com:glimpseio/Glimpse.git
   master = master
 	branch = master
 [submodule "glimpseviz"]
   path = glimpseviz
-  url = https://github.com/glimpseio/glimpseviz.git
+  url = git@github.com:glimpseio/glimpseviz.git
   master = master
     branch = master
