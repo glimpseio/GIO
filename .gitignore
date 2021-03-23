@@ -23,6 +23,7 @@ xcuserdata/
 .*.swp
 *.moved-aside
 *.xcuserstate
+*.xcbkptlist
 
 ## Obj-C/Swift specific
 *.hmap
