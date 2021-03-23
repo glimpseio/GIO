@@ -1,3 +1,8 @@
+[submodule "BricBrac"]
+  path = BricBrac
+  url = git@github.com:glimpseio/BricBrac.git
+  master = main
+	branch = main
 [submodule "GUI"]
   path = GUI
   url = git@github.com:glimpseio/GUI.git
@@ -21,11 +26,6 @@
 [submodule "Glance"]
   path = Glance
   url = git@github.com:glimpseio/Glance.git
-  master = master
-	branch = master
-[submodule "BricBrac"]
-  path = BricBrac
-  url = git@github.com:glimpseio/BricBrac.git
   master = master
 	branch = master
 [submodule "Glimpse"]
