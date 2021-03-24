@@ -89,6 +89,7 @@ jobs:
       # not required, but helps speed up rebuilding unchanged projects
       - name: Cache Derived data
         uses: actions/cache@v2
+        if: false # disabled while debugging cache issues
         with:
           path: ~/Library/Developer/Xcode/DerivedData
           key: ddata-${{ hashFiles('**/*.pbxproj') }}
