@@ -9,10 +9,9 @@ Xcode 12.2+ on macOS 11
 ```bash
 $ git clone -j8 --recurse-submodules --remote-submodules https://github.com/glimpseio/GIO.git
 $ cd GIO/
-$ git submodule foreach git checkout master
 ```
  
-## Refresh `master`
+## Refresh `HEAD`
 
 ```bash
 $ git pull --recurse-submodules -j8
@@ -44,8 +43,8 @@ A high-level overview of the modules is as follows:
 
 ### [BricBrac](https://github.com/glimpseio/BricBrac)
 Data structures and utilities for `Codable` models. ~15k SLOC.
- * [BricBrac/BricBrac](https://github.com/glimpseio/BricBrac/tree/master/Sources/BricBrac): Provides JSON utilities and structures for `Codable` support, such as a `Bric` enum representing JSON data types and a `OneOf2` *"Either"* type.
- * [BricBrac/Curio](https://github.com/glimpseio/BricBrac/tree/master/Sources/Curio): Swift `struct` code-generator for [JSON Schema](http://json-schema.org) definitions.
+ * [BricBrac/BricBrac](https://github.com/glimpseio/BricBrac/tree/main/Sources/BricBrac): Provides JSON utilities and structures for `Codable` support, such as a `Bric` enum representing JSON data types and a `OneOf2` *"Either"* type.
+ * [BricBrac/Curio](https://github.com/glimpseio/BricBrac/tree/main/Sources/Curio): Swift `struct` code-generator for [JSON Schema](http://json-schema.org) definitions.
  
  ### [Glib](https://github.com/glimpseio/Glib)
  Common shared utilities for parsing, logging, platform interaction, etc. ~22k SLOC.
