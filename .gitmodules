@@ -38,3 +38,7 @@
   url = git@github.com:glimpseio/glimpseviz.git
   master = master
     branch = master
+[submodule "GGSpec"]
+	path = GGSpec
+	url = git@github.com:glimpseio/GGSpec.git
+	branch = main
