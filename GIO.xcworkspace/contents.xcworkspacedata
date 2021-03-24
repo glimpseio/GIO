@@ -8,6 +8,9 @@
       location = "group:Glance/Glance.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:GGSpec/GGSpec.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Glue/Glue.xcodeproj">
    </FileRef>
    <FileRef
