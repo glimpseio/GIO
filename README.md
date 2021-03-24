@@ -7,7 +7,7 @@ Xcode 12.2+ on macOS 11
 ## Clone repository & submodules
 
 ```bash
-$ git clone -j8 --recurse-submodules --remote-submodules https://github.com/glimpseio/GIO.git
+$ git clone -j8 --recurse-submodules --remote-submodules git@github.com:glimpseio/GIO.git
 $ cd GIO/
 ```
  
