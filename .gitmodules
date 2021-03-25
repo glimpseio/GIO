@@ -1,12 +1,11 @@
 [submodule "BricBrac"]
   path = BricBrac
   url = git@github.com:glimpseio/BricBrac.git
-  master = main
-	branch = main
+  branch = main
 [submodule "GGSpec"]
-	path = GGSpec
-	url = git@github.com:glimpseio/GGSpec.git
-	branch = main
+  path = GGSpec
+  url = git@github.com:glimpseio/GGSpec.git
+  branch = main
 [submodule "GUI"]
   path = GUI
   url = git@github.com:glimpseio/GUI.git
@@ -42,3 +41,6 @@
   url = git@github.com:glimpseio/glimpseviz.git
   master = master
     branch = master
+[submodule "MiscKit"]
+	path = MiscKit
+	url = git@github.com:glimpseio/MiscKit.git
