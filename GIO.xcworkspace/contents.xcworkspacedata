@@ -22,4 +22,7 @@
    <FileRef
       location = "group:BricBrac/BricBrac.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:MiscKit/MiscKit.xcodeproj">
+   </FileRef>
 </Workspace>
