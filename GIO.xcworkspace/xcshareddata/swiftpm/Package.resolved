@@ -38,15 +38,6 @@
         }
       },
       {
-        "package": "MiscKit",
-        "repositoryURL": "https://github.com/glimpseio/MiscKit",
-        "state": {
-          "branch": "main",
-          "revision": "fd1a93d8c3edf09a3cd6962907f23fa9468ff69a",
-          "version": null
-        }
-      },
-      {
         "package": "Sparkle",
         "repositoryURL": "https://github.com/sparkle-project/Sparkle",
         "state": {

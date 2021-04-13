@@ -8,9 +8,6 @@
       location = "group:Glance/Glance.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:GGSpec/GGSpec.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:Glue/Glue.xcodeproj">
    </FileRef>
    <FileRef
@@ -20,6 +17,12 @@
       location = "group:Glib/Glib.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:BricBrac/BricBrac.xcodeproj">
+      location = "group:GGSpec">
+   </FileRef>
+   <FileRef
+      location = "group:MiscKit">
+   </FileRef>
+   <FileRef
+      location = "group:BricBrac">
    </FileRef>
 </Workspace>
