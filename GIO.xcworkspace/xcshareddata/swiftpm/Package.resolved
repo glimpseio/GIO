@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "BricBrac",
+        "repositoryURL": "https://github.com/glimpseio/BricBrac.git",
+        "state": {
+          "branch": "main",
+          "revision": "0b29e0ccd5970900bdd1224490c2fe11b01d0ad2",
+          "version": null
+        }
+      },
+      {
         "package": "Chalk",
         "repositoryURL": "https://github.com/mxcl/Chalk.git",
         "state": {
