@@ -32,13 +32,13 @@ jobs:
           token: ${{ secrets.ACCESS_TOKEN }}
 
       # not required, but helps speed up rebuilding unchanged projects
-      - name: Cache Derived data
-        if: false # disabled to work0-around intermittent issues
-        uses: actions/cache@v2
-        with:
-          path: ~/Library/Developer/Xcode/DerivedData
-          key: ddata-${{ hashFiles('**/*.pbxproj') }}
-          restore-keys: ddata-
+      #- name: Cache Derived data
+      #  if: false # disabled to work0-around intermittent issues
+      #  uses: actions/cache@v2
+      #  with:
+      #    path: ~/Library/Developer/Xcode/DerivedData
+      #    key: ddata-${{ hashFiles('**/*.pbxproj') }}
+      #    restore-keys: ddata-
           
       - name: Run Tests
         run: |
