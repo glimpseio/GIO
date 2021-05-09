@@ -43,8 +43,8 @@ jobs:
       - name: Run Tests
         run: |
           xcodebuild test \
-            -scheme "Glimpse"
-           #| xcpretty --report html --screenshots && exit ${PIPESTATUS[0]}
+            -scheme "Glimpse" \
+           | xcpretty --report html --screenshots && exit ${PIPESTATUS[0]}
 
       - name: Upload Test Output
         uses: actions/upload-artifact@v2
