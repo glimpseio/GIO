@@ -44,3 +44,12 @@
 [submodule "MiscKit"]
 	path = MiscKit
 	url = git@github.com:glimpseio/MiscKit.git
+[submodule "KanjiVM"]
+	path = KanjiVM
+	url = git@github.com:jectivex/KanjiVM.git
+[submodule "SwiftJS"]
+	path = SwiftJS
+	url = git@github.com:jectivex/SwiftJS.git
+[submodule "Judo"]
+	path = Judo
+	url = git@github.com:jectivex/Judo.git

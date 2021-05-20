@@ -65,6 +65,15 @@
         }
       },
       {
+        "package": "SwiftJS",
+        "repositoryURL": "https://github.com/jectivex/SwiftJS.git",
+        "state": {
+          "branch": "main",
+          "revision": "88d4382f01cd4fe2579388c7e1617bccee52af97",
+          "version": null
+        }
+      },
+      {
         "package": "ZIPFoundation",
         "repositoryURL": "https://github.com/glimpseio/ZIPFoundation",
         "state": {
