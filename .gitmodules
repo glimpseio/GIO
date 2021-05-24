@@ -53,3 +53,6 @@
 [submodule "Judo"]
 	path = Judo
 	url = git@github.com:jectivex/Judo.git
+[submodule "JXKit"]
+	path = JXKit
+	url = git@github.com:jectivex/JXKit.git
