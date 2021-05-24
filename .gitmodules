@@ -53,6 +53,3 @@
 [submodule "JXKit"]
 	path = JXKit
 	url = git@github.com:jectivex/JXKit.git
-[submodule "SwiftJS"]
-	path = SwiftJS
-	url = git@github.com:jectivex/SwiftJS.git
