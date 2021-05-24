@@ -29,6 +29,15 @@
         }
       },
       {
+        "package": "JXKit",
+        "repositoryURL": "https://github.com/jectivex/JXKit.git",
+        "state": {
+          "branch": "main",
+          "revision": "1c87d37afb0c071fcc0df87c2640504d9ce50065",
+          "version": null
+        }
+      },
+      {
         "package": "MemoZ",
         "repositoryURL": "https://github.com/marcprux/MemoZ",
         "state": {
@@ -62,15 +71,6 @@
           "branch": null,
           "revision": "077c096c3ddfc38db223ac8e525ad16ffb987138",
           "version": "0.12.0"
-        }
-      },
-      {
-        "package": "SwiftJS",
-        "repositoryURL": "https://github.com/jectivex/SwiftJS.git",
-        "state": {
-          "branch": "main",
-          "revision": "88d4382f01cd4fe2579388c7e1617bccee52af97",
-          "version": null
         }
       },
       {

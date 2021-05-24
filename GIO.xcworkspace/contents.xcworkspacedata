@@ -17,10 +17,7 @@
       location = "group:Glib/Glib.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:SwiftJS">
-   </FileRef>
-   <FileRef
-      location = "group:KanjiVM">
+      location = "group:JXKit">
    </FileRef>
    <FileRef
       location = "group:Judo">
