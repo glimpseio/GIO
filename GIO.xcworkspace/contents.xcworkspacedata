@@ -26,6 +26,9 @@
       location = "group:GGSpec">
    </FileRef>
    <FileRef
+      location = "group:GGViz">
+   </FileRef>
+   <FileRef
       location = "group:MiscKit">
    </FileRef>
    <FileRef
