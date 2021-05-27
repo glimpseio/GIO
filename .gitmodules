@@ -53,3 +53,6 @@
 [submodule "JXKit"]
 	path = JXKit
 	url = git@github.com:jectivex/JXKit.git
+[submodule "GGViz"]
+	path = GGViz
+	url = git@github.com:glimpseio/GGViz.git
