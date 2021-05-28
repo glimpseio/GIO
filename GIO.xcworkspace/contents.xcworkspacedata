@@ -17,21 +17,21 @@
       location = "group:Glib/Glib.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:JXKit">
+      location = "group:GGViz">
    </FileRef>
    <FileRef
       location = "group:Judo">
    </FileRef>
    <FileRef
+      location = "group:JXKit">
+   </FileRef>
+   <FileRef
       location = "group:GGSpec">
    </FileRef>
    <FileRef
-      location = "group:GGViz">
+      location = "group:BricBrac">
    </FileRef>
    <FileRef
       location = "group:MiscKit">
-   </FileRef>
-   <FileRef
-      location = "group:BricBrac">
    </FileRef>
 </Workspace>

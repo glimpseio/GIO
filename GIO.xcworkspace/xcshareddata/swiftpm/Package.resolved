@@ -29,21 +29,21 @@
         }
       },
       {
-        "package": "JXKit",
-        "repositoryURL": "https://github.com/jectivex/JXKit.git",
-        "state": {
-          "branch": "main",
-          "revision": "1c87d37afb0c071fcc0df87c2640504d9ce50065",
-          "version": null
-        }
-      },
-      {
         "package": "MemoZ",
         "repositoryURL": "https://github.com/marcprux/MemoZ",
         "state": {
           "branch": null,
           "revision": "9a8ec428b49728ce7eaf184a13a152e1428ab18f",
           "version": "1.4.0"
+        }
+      },
+      {
+        "package": "MiscKit",
+        "repositoryURL": "https://github.com/glimpseio/MiscKit",
+        "state": {
+          "branch": "main",
+          "revision": "23988cbc70e695977524be5f7652ac9896fd1963",
+          "version": null
         }
       },
       {
