@@ -68,12 +68,12 @@ jobs:
       #CONFIGURATION: Debug
     
     steps:
-      - name: configure_build_debug
-        if: false == startsWith(github.ref, 'refs/tags/')
-        run: echo "CONFIGURATION=Debug" >> $GITHUB_ENV
+      #- name: configure_build_debug
+      #  if: false == startsWith(github.ref, 'refs/tags/')
+      #  run: echo "CONFIGURATION=Debug" >> $GITHUB_ENV
 
       - name: configure_build_release
-        if: true == startsWith(github.ref, 'refs/tags/')
+        #if: true == startsWith(github.ref, 'refs/tags/')
         run: echo "CONFIGURATION=Release" >> $GITHUB_ENV
 
       - name: Cancel Previous Runs
