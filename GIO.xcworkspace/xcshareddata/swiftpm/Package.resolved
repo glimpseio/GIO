@@ -38,15 +38,6 @@
         }
       },
       {
-        "package": "MiscKit",
-        "repositoryURL": "https://github.com/glimpseio/MiscKit",
-        "state": {
-          "branch": "main",
-          "revision": "23988cbc70e695977524be5f7652ac9896fd1963",
-          "version": null
-        }
-      },
-      {
         "package": "Sparkle",
         "repositoryURL": "https://github.com/sparkle-project/Sparkle",
         "state": {
@@ -71,15 +62,6 @@
           "branch": null,
           "revision": "077c096c3ddfc38db223ac8e525ad16ffb987138",
           "version": "0.12.0"
-        }
-      },
-      {
-        "package": "ZIPFoundation",
-        "repositoryURL": "https://github.com/glimpseio/ZIPFoundation",
-        "state": {
-          "branch": "development",
-          "revision": "7584b1037df73fccd7a30fbbf123488374c7e857",
-          "version": null
         }
       }
     ]
