@@ -45,6 +45,7 @@ jobs:
           xcodebuild test \
             -scheme "Glimpse" \
            DISABLE_DIAMOND_PROBLEM_DIAGNOSTIC=YES \
+           CODE_SIGNING_ALLOWED=NO \
            | xcpretty --report html --screenshots && exit ${PIPESTATUS[0]}
 
       - name: Upload Test Output
