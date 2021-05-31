@@ -56,3 +56,6 @@
 [submodule "GGViz"]
 	path = GGViz
 	url = git@github.com:glimpseio/GGViz.git
+[submodule "JXSwift"]
+	path = JXSwift
+	url = git@github.com:jectivex/JXSwift.git
