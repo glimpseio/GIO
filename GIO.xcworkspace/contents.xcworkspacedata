@@ -34,4 +34,7 @@
    <FileRef
       location = "group:MiscKit">
    </FileRef>
+   <FileRef
+      location = "group:JSSwift">
+   </FileRef>
 </Workspace>
