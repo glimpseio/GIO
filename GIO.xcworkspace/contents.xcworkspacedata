@@ -20,6 +20,9 @@
       location = "group:GGViz">
    </FileRef>
    <FileRef
+      location = "group:JSSwift">
+   </FileRef>
+   <FileRef
       location = "group:Judo">
    </FileRef>
    <FileRef
@@ -33,8 +36,5 @@
    </FileRef>
    <FileRef
       location = "group:MiscKit">
-   </FileRef>
-   <FileRef
-      location = "group:JSSwift">
    </FileRef>
 </Workspace>
