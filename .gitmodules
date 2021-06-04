@@ -62,3 +62,9 @@
 [submodule "JSSwift"]
 	path = JSSwift
 	url = git@github.com:jectivex/JSSwift.git
+[submodule "Able"]
+	path = Able
+	url = git@github.com:pixoticnet/Able.git
+[submodule "Payne"]
+	path = Payne
+	url = git@github.com:pixoticnet/Payne.git

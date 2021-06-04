@@ -17,6 +17,12 @@
       location = "group:Glib/Glib.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Able">
+   </FileRef>
+   <FileRef
+      location = "group:Payne">
+   </FileRef>
+   <FileRef
       location = "group:GGViz">
    </FileRef>
    <FileRef
