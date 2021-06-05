@@ -17,13 +17,16 @@
       location = "group:Glib/Glib.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Able">
-   </FileRef>
-   <FileRef
       location = "group:Payne">
    </FileRef>
    <FileRef
+      location = "group:Able">
+   </FileRef>
+   <FileRef
       location = "group:GGViz">
+   </FileRef>
+   <FileRef
+      location = "group:GGSpec">
    </FileRef>
    <FileRef
       location = "group:JSSwift">
@@ -33,9 +36,6 @@
    </FileRef>
    <FileRef
       location = "group:JXKit">
-   </FileRef>
-   <FileRef
-      location = "group:GGSpec">
    </FileRef>
    <FileRef
       location = "group:BricBrac">
