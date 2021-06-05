@@ -2,15 +2,6 @@
   "object": {
     "pins": [
       {
-        "package": "GGSpec",
-        "repositoryURL": "https://github.com/glimpseio/GGSpec.git",
-        "state": {
-          "branch": "main",
-          "revision": "3f4e358616fbd76a099444c22de47f8478c2ff4b",
-          "version": null
-        }
-      },
-      {
         "package": "HubOMatic",
         "repositoryURL": "https://github.com/hubomatic/HubOMatic.git",
         "state": {
