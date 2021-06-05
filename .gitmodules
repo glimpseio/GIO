@@ -68,3 +68,6 @@
 [submodule "Payne"]
 	path = Payne
 	url = git@github.com:pixoticnet/Payne.git
+[submodule "MemoZ"]
+	path = MemoZ
+	url = git@github.com:marcprux/MemoZ.git

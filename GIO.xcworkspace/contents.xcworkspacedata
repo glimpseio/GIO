@@ -43,4 +43,7 @@
    <FileRef
       location = "group:MiscKit">
    </FileRef>
+   <FileRef
+      location = "group:MemoZ">
+   </FileRef>
 </Workspace>
