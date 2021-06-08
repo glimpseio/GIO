@@ -71,3 +71,6 @@
 [submodule "MemoZ"]
 	path = MemoZ
 	url = git@github.com:marcprux/MemoZ.git
+[submodule "ParCore"]
+	path = ParCore
+	url = git@github.com:parquette/ParCore.git
