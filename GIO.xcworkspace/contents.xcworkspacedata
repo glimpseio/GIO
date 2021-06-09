@@ -46,4 +46,7 @@
    <FileRef
       location = "group:MemoZ">
    </FileRef>
+   <FileRef
+      location = "group:GGDemo">
+   </FileRef>
 </Workspace>
