@@ -54,6 +54,27 @@ jobs:
           name: test_results
           path: build/reports/tests.html
 
+  beta-job:
+    name: Glimpse Beta
+    runs-on: macos-11.0
+    timeout-minutes: 240
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0 # https://github.com/actions/checkout/issues/100
+          token: ${{ secrets.ACCESS_TOKEN }}
+
+      - name: Run Tests
+        run: |
+          xcodebuild test \
+            -scheme "GlimpseMacOS" \
+           DISABLE_DIAMOND_PROBLEM_DIAGNOSTIC=YES \
+           CODE_SIGNING_ALLOWED=NO \
+           | xcpretty --report html --screenshots && exit ${PIPESTATUS[0]}
+
   release-job:
     name: Glimpse Release
     runs-on: macos-latest
