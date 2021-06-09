@@ -47,6 +47,6 @@
       location = "group:MemoZ">
    </FileRef>
    <FileRef
-      location = "group:GGDemo">
+      location = "group:../../../../Users/marc/Desktop/GGDemo">
    </FileRef>
 </Workspace>
