@@ -74,3 +74,6 @@
 [submodule "ParCore"]
 	path = ParCore
 	url = git@github.com:parquette/ParCore.git
+[submodule "ParKit"]
+	path = ParKit
+	url = git@github.com:parquette/ParKit.git

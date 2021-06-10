@@ -49,4 +49,10 @@
    <FileRef
       location = "group:../../../../Users/marc/Desktop/GGDemo">
    </FileRef>
+   <FileRef
+      location = "group:ParCore">
+   </FileRef>
+   <FileRef
+      location = "group:ParKit">
+   </FileRef>
 </Workspace>
