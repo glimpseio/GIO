@@ -15,9 +15,9 @@ jobs:
   test-job:
     name: Glimpse Tests
     runs-on: macos-11
+    timeout-minutes: 240
     env:
       DEVELOPER_DIR: /Applications/Xcode_12.5.app/Contents/Developer
-    timeout-minutes: 240
 
     steps:
       - name: Cancel Previous Runs
@@ -59,9 +59,10 @@ jobs:
   beta-job:
     name: Glimpse Beta
     runs-on: macos-11
+    timeout-minutes: 240
     env:
       DEVELOPER_DIR: /Applications/Xcode_12.5.app/Contents/Developer
-    timeout-minutes: 240
+
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -80,12 +81,11 @@ jobs:
   release-job:
     name: Glimpse Release
     runs-on: macos-latest
-    env:
-      DEVELOPER_DIR: /Applications/Xcode_12.5.app/Contents/Developer
     timeout-minutes: 240
 
     environment: Signing
     env:
+      DEVELOPER_DIR: /Applications/Xcode_12.5.app/Contents/Developer
       ORG_NAME: glimpseio 
       REPO_NAME: GIO
       APP_NAME: Glimpse
