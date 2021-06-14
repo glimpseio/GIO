@@ -59,7 +59,6 @@ jobs:
     runs-on: macos-11.0
     timeout-minutes: 240
     steps:
-
       - name: Checkout
         uses: actions/checkout@v2
         with:
@@ -67,13 +66,12 @@ jobs:
           fetch-depth: 0 # https://github.com/actions/checkout/issues/100
           token: ${{ secrets.ACCESS_TOKEN }}
 
-      - name: Run Tests
+      - name: Archive GlimpseMacOS
         run: |
-          xcodebuild test \
+          xcodebuild archive \
             -scheme "GlimpseMacOS" \
            DISABLE_DIAMOND_PROBLEM_DIAGNOSTIC=YES \
-           CODE_SIGNING_ALLOWED=NO \
-           | xcpretty --report html --screenshots && exit ${PIPESTATUS[0]}
+           CODE_SIGNING_ALLOWED=NO
 
   release-job:
     name: Glimpse Release
