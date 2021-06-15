@@ -80,7 +80,7 @@ jobs:
 
   release-job:
     name: Glimpse Release
-    runs-on: macos-latest
+    runs-on: macos-11
     timeout-minutes: 240
 
     environment: Signing
