@@ -148,7 +148,7 @@ jobs:
       - name: "Notarize"
         uses: hubomatic/hubomat@0.1.7
         with:
-          verbose: true
+          verbose: false
           timeout: 180 # minutes
           scheme: "${{ env.APP_NAME }}"
 
