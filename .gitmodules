@@ -77,3 +77,6 @@
 [submodule "ParKit"]
 	path = ParKit
 	url = git@github.com:parquette/ParKit.git
+[submodule "GGGrammar"]
+	path = GGGrammar
+	url = git@github.com:glimpseio/GGGrammar.git
