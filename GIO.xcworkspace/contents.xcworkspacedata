@@ -26,9 +26,6 @@
       location = "group:GGViz">
    </FileRef>
    <FileRef
-      location = "group:GGSpec">
-   </FileRef>
-   <FileRef
       location = "group:JSSwift">
    </FileRef>
    <FileRef

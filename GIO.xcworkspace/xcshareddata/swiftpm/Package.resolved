@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "GGGrammar",
+        "repositoryURL": "https://github.com/glimpseio/GGGrammar.git",
+        "state": {
+          "branch": "main",
+          "revision": "4794a893f3a68d43cbceb49f9dd5f7b85f194804",
+          "version": null
+        }
+      },
+      {
         "package": "HubOMatic",
         "repositoryURL": "https://github.com/hubomatic/HubOMatic.git",
         "state": {
